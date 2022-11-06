@@ -11,7 +11,7 @@ A template for game development primarily with C++ in mind. This also includes a
     - **A / D:** Move left/right.
     - **W:** Jump.
     - **Space:** Toggle sprite rotating with physics engine.
-    - **Enter:** Toggle camera follow ing player.
+    - **Enter:** Toggle camera following player.
 
 - All the content for the game is located inside the `content/game/content` folder. All the content inside the last `content` folder there is copied automatically to the output bin path via `CMake` when the `CMakeLists.txt` project is loaded. If any changes are done to these files, you can make sure the last files are updated by simply reloading the `CMakeLists.txt` file related to `raylib_template`. In `CLion` this is as easy as right-clicking the `CMakeLists.txt` file and choosing `Reload CMake Project`.
 
