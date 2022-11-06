@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-namespace dev
+namespace ggj
 {
     // Based on the RayLib Keyboard keys (US keyboard layout)
     // NOTE: Use GetKeyPressed() to allow redefining

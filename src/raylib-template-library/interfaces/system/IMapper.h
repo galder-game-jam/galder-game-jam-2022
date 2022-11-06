@@ -8,7 +8,7 @@
 #include "../../enums/ResourceName.h"
 #include "../../enums/TextureName.h"
 
-namespace dev
+namespace ggj
 {
     class IMapper
     {

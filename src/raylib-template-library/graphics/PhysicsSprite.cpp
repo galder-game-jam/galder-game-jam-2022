@@ -4,7 +4,7 @@
 
 #include "PhysicsSprite.h"
 
-namespace dev
+namespace ggj
 {
     void PhysicsSprite::draw()
     {

@@ -7,7 +7,7 @@
 
 #include "../../gamedev-base/GameDevBase.h"
 
-namespace dev
+namespace ggj
 {
     /*!
      * Use when you want to disable logging

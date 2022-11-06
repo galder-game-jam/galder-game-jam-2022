@@ -12,12 +12,12 @@
 #include "../enums/TextureName.h"
 #include "../interfaces/system/IMapper.h"
 
-namespace dev
+namespace ggj
 {
-    class TextureManager : public dev::ITextureManager<TextureName, raylib::Texture>
+    class TextureManager : public ggj::ITextureManager<TextureName, raylib::Texture>
     {
         public:
-            TextureManager(dev::ILogger &logger, IMapper &mapper, dev::IResourceManager<ResourceName> &resources)
+            TextureManager(ggj::ILogger &logger, IMapper &mapper, ggj::IResourceManager<ResourceName> &resources)
                     : m_logger{logger}, m_mapper{mapper}, m_resources{resources}
             {
 
@@ -30,9 +30,9 @@ namespace dev
         private:
             bool loadTexture(TextureName id);
 
-            dev::ILogger &m_logger;
+            ggj::ILogger &m_logger;
             IMapper &m_mapper;
-            dev::IResourceManager<ResourceName> &m_resources;
+            ggj::IResourceManager<ResourceName> &m_resources;
 
             std::map<TextureName, std::unique_ptr<raylib::Texture>> m_textures;
     };

@@ -8,7 +8,7 @@
 #include <vector>
 #include <cstdint>
 
-namespace dev
+namespace ggj
 {
     template <class T>
     class IInputManager

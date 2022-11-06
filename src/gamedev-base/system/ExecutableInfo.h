@@ -7,7 +7,7 @@
 
 #include "../../gamedev-base/GameDevBase.h"
 #include <filesystem>
-namespace dev
+namespace ggj
 {
 
     class ExecutableInfo : public IExecutableInfo

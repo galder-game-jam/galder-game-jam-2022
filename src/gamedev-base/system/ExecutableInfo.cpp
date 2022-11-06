@@ -5,7 +5,7 @@
 #include <atomic>
 #include "ExecutableInfo.h"
 
-namespace dev
+namespace ggj
 {
     std::filesystem::path ExecutableInfo::getExecutablePath()
     {

@@ -4,7 +4,7 @@
 
 #include "PhysicsObject.h"
 
-namespace dev
+namespace ggj
 {
     void PhysicsObject::rotate(float degrees)
     {

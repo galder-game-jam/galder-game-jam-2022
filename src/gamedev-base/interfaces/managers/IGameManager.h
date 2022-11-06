@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_IGAMEMANAGER_H
 #define GAME_DEV_TEMPLATE_IGAMEMANAGER_H
 
-namespace dev
+namespace ggj
 {
     class IGameManager
     {

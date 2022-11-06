@@ -10,9 +10,9 @@
 #include "../enums/PhysicsShape.h"
 #include "../../gamedev-base/GameDevBase.h"
 
-namespace dev
+namespace ggj
 {
-    class PhysicsObject : public dev::IGameObject<raylib::Vector2>
+    class PhysicsObject : public ggj::IGameObject<raylib::Vector2>
     {
         public:
             PhysicsObject() = default;

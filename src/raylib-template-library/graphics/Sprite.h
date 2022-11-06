@@ -8,10 +8,10 @@
 #include "raylib-cpp.hpp"
 #include "../../gamedev-base/GameDevBase.h"
 
-namespace dev
+namespace ggj
 {
 
-    class Sprite : public dev::IGameObject<raylib::Vector2>
+    class Sprite : public ggj::IGameObject<raylib::Vector2>
     {
         public:
             Sprite() = default;

@@ -7,7 +7,7 @@
 
 #include <string>
 
-namespace dev
+namespace ggj
 {
     template <class T>
     class IResourceManager

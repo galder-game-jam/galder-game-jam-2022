@@ -5,7 +5,7 @@
 #include "GameManager.h"
 
 
-bool dev::GameManager::initialize()
+bool ggj::GameManager::initialize()
 {
     if(!m_worlds.initialize())
     {
@@ -19,7 +19,7 @@ bool dev::GameManager::initialize()
     return true;
 }
 
-void dev::GameManager::update(float timeDelta)
+void ggj::GameManager::update(float timeDelta)
 {
     m_lastTimeDelta = timeDelta;
     m_debugManager.clearText();
@@ -28,7 +28,7 @@ void dev::GameManager::update(float timeDelta)
     updateTestStuff();
 }
 
-void dev::GameManager::draw()
+void ggj::GameManager::draw()
 {
     m_renderTexture.BeginMode();
     //drawTestStuff();
@@ -41,7 +41,7 @@ void dev::GameManager::draw()
 /*!
  *  Makes anything drawn to the m_renderTexture get rendered on the screen and scaled with the screen size.
  */
-void dev::GameManager::render()
+void ggj::GameManager::render()
 {
     float scale = std::min((float)m_window.GetWidth()/m_originalWindowSize.x, (float)m_window.GetHeight()/m_originalWindowSize.y);
     BeginDrawing();
@@ -53,7 +53,7 @@ void dev::GameManager::render()
     EndDrawing();
 }
 
-void dev::GameManager::updateTestStuff()
+void ggj::GameManager::updateTestStuff()
 {
     std::string keys = "Keys: ";
     bool first = true;
@@ -66,10 +66,10 @@ void dev::GameManager::updateTestStuff()
     if(!first) //Only change text when something is returned
         m_testTextKeys.SetText(keys);
 
-    m_testShouldDrawPinkRect = m_input.keysDown({dev::KeyboardKey::R, dev::KeyboardKey::B, dev::KeyboardKey::P});
+    m_testShouldDrawPinkRect = m_input.keysDown({ggj::KeyboardKey::R, ggj::KeyboardKey::B, ggj::KeyboardKey::P});
 }
 
-void dev::GameManager::drawTestStuff()
+void ggj::GameManager::drawTestStuff()
 {
     //DrawText("Congrats! You created your first window!", 10, 200, 16, LIGHTGRAY);
     m_testRect.Draw(raylib::Color::Blue());

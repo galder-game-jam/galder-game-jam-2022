@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_IWORLDMANAGER_H
 #define GAME_DEV_TEMPLATE_IWORLDMANAGER_H
 
-namespace dev
+namespace ggj
 {
     //template <class T>
     class IWorldManager

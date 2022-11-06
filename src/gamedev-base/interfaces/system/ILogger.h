@@ -8,7 +8,7 @@
 #include <string>
 #include "../../enums/LogLevel.h"
 
-namespace dev
+namespace ggj
 {
     class ILogger
     {

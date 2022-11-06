@@ -5,7 +5,7 @@
 #include <cstdint>
 #include "Timer.h"
 
-namespace dev
+namespace ggj
 {
     Timer::Timer()
     {

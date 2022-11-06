@@ -8,13 +8,13 @@
 #include "../graphics/PhysicsSprite.h"
 #include "../enums/KeyboardKey.h"
 
-namespace dev
+namespace ggj
 {
     class Player : public PhysicsSprite
     {
         public:
             Player() = default;
-            Player(dev::IInputManager<dev::KeyboardKey> &inputManager, b2Body *body, const raylib::Vector2 &size,
+            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, b2Body *body, const raylib::Vector2 &size,
                    const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
             : PhysicsSprite(body, size, drawingRect, texture, isVisible), m_inputManager {inputManager}
             {
@@ -30,7 +30,7 @@ namespace dev
         private:
             void handleInputs(float timeDelta);
 
-            dev::IInputManager<dev::KeyboardKey> &m_inputManager;
+            ggj::IInputManager<ggj::KeyboardKey> &m_inputManager;
             Vector2 m_velocity {0.f, 0.f};
             bool m_cameraShouldFollowPlayer {false};
     };

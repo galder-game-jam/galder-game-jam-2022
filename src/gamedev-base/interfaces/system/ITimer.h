@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-namespace dev
+namespace ggj
 {
 
     class ITimer

@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_IWORLD_H
 #define GAME_DEV_TEMPLATE_IWORLD_H
 
-namespace dev
+namespace ggj
 {
 
     template <class T>

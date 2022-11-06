@@ -8,7 +8,7 @@
 #include <cstdint>
 #include "../../system/Colori.hpp"
 
-namespace dev
+namespace ggj
 {
     class IDebugManager
     {
@@ -19,7 +19,7 @@ namespace dev
             virtual ~IDebugManager() noexcept = default;
 
             virtual void clearText() = 0;
-            virtual void setText(uint16_t line, const std::string &text, const dev::Colori &color = {255, 255, 255, 255}) = 0;
+            virtual void setText(uint16_t line, const std::string &text, const ggj::Colori &color = {255, 255, 255, 255}) = 0;
             virtual bool initialize() = 0;
             virtual void update(float timeDelta) = 0;
             virtual void draw() = 0;

@@ -9,13 +9,13 @@
 #include "../../gamedev-base/GameDevBase.h"
 #include "fmt/format.h"
 
-namespace dev
+namespace ggj
 {
     template <class T>
     class ResourceManager : public IResourceManager<T>
     {
         public:
-            explicit ResourceManager(dev::IExecutableInfo &executableInfo) : m_executableInfo {executableInfo} {};
+            explicit ResourceManager(ggj::IExecutableInfo &executableInfo) : m_executableInfo {executableInfo} {};
             void initialize() override;
 
             void add(T resourceType, std::string value) override;
@@ -28,21 +28,21 @@ namespace dev
         private:
             std::map<T, std::string> m_resources;
 
-            dev::IExecutableInfo &m_executableInfo;
+            ggj::IExecutableInfo &m_executableInfo;
     };
 
     template<class T>
     void ResourceManager<T>::initialize()
     {
-        add(dev::ResourceName::GraphicsPlayer, "graphics/characters.png");
-        add(dev::ResourceName::GraphicsPlayerSimple, "graphics/player-simple.png");
-        add(dev::ResourceName::GraphicsTileset1, "graphics/sheet.png");
-        add(dev::ResourceName::GraphicsTileset2, "graphics/tiles.png");
-        add(dev::ResourceName::GraphicsBoulderSmall, "graphics/boulder-small.png");
-        add(dev::ResourceName::GraphicsBoulderMedium, "graphics/boulder-medium.png");
-        add(dev::ResourceName::GraphicsBoulderBig, "graphics/boulder-big.png");
-        add(dev::ResourceName::GraphicsAndre, "graphics/andre.png");
-        add(dev::ResourceName::MapProject, "maps/gamedev.tiled-project");
+        add(ggj::ResourceName::GraphicsPlayer, "graphics/characters.png");
+        add(ggj::ResourceName::GraphicsPlayerSimple, "graphics/player-simple.png");
+        add(ggj::ResourceName::GraphicsTileset1, "graphics/sheet.png");
+        add(ggj::ResourceName::GraphicsTileset2, "graphics/tiles.png");
+        add(ggj::ResourceName::GraphicsBoulderSmall, "graphics/boulder-small.png");
+        add(ggj::ResourceName::GraphicsBoulderMedium, "graphics/boulder-medium.png");
+        add(ggj::ResourceName::GraphicsBoulderBig, "graphics/boulder-big.png");
+        add(ggj::ResourceName::GraphicsAndre, "graphics/andre.png");
+        add(ggj::ResourceName::MapProject, "maps/gamedev.tiled-project");
     }
 
     template<class T>

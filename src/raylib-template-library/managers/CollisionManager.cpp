@@ -4,7 +4,7 @@
 
 #include "CollisionManager.h"
 
-namespace dev
+namespace ggj
 {
     void CollisionManager::BeginContact(b2Contact *contact)
     {

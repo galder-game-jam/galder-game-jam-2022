@@ -4,7 +4,7 @@
 
 #include "DebugManager.h"
 
-namespace dev
+namespace ggj
 {
     void DebugManager::setText(uint16_t line, const std::string &text, const Colori &color)
     {
@@ -28,7 +28,7 @@ namespace dev
         for(auto & debugText : m_debugTexts)
         {
             std::string text = debugText.second.first;
-            dev::Colori c = debugText.second.second;
+            ggj::Colori c = debugText.second.second;
             raylib::Color color = {c.r, c.g, c.b, c.a};
 
             DrawText(text.c_str(), (int)textPos.x, (int)textPos.y, m_fontSize, color);

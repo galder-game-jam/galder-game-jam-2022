@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-namespace dev
+namespace ggj
 {
     /*!
      * ResourceName should be composed by something like this:

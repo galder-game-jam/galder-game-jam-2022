@@ -14,14 +14,14 @@
 #include <map>
 #include "CollisionManager.h"
 
-namespace dev
+namespace ggj
 {
-    class WorldManager : public dev::IWorldManager
+    class WorldManager : public ggj::IWorldManager
     {
         public:
-            WorldManager(dev::ILogger &logger, dev::IResourceManager<ResourceName> &resources, IMapper &mapper,
-                         dev::ITextureManager<TextureName, raylib::Texture> &textures, raylib::Window &window,
-                         dev::IInputManager<dev::KeyboardKey> &input, dev::CollisionManager & collisionManager, dev::IDebugManager &debugManager)
+            WorldManager(ggj::ILogger &logger, ggj::IResourceManager<ResourceName> &resources, IMapper &mapper,
+                         ggj::ITextureManager<TextureName, raylib::Texture> &textures, raylib::Window &window,
+                         ggj::IInputManager<ggj::KeyboardKey> &input, ggj::CollisionManager & collisionManager, ggj::IDebugManager &debugManager)
                     : m_logger{logger}, m_resources{resources}, m_mapper{mapper}, m_textures{textures},
                       m_window{window}, m_input{input}, m_collisionManager {collisionManager}, m_debugManager {debugManager}
             {
@@ -37,18 +37,18 @@ namespace dev
 
             Stage getStageByFilename(const std::string &filename);
 
-            dev::ILogger &m_logger;
-            dev::IResourceManager<ResourceName> &m_resources;
+            ggj::ILogger &m_logger;
+            ggj::IResourceManager<ResourceName> &m_resources;
             IMapper &m_mapper;
-            dev::ITextureManager<TextureName, raylib::Texture> &m_textures;
+            ggj::ITextureManager<TextureName, raylib::Texture> &m_textures;
             raylib::Window &m_window;
-            dev::IInputManager<dev::KeyboardKey> &m_input;
-            dev::CollisionManager &m_collisionManager;
-            dev::IDebugManager &m_debugManager;
+            ggj::IInputManager<ggj::KeyboardKey> &m_input;
+            ggj::CollisionManager &m_collisionManager;
+            ggj::IDebugManager &m_debugManager;
 
             std::unique_ptr<tson::Project> m_project{nullptr};
 
-            std::map<Stage, std::unique_ptr<dev::IWorld<Stage>>> m_worlds;
+            std::map<Stage, std::unique_ptr<ggj::IWorld<Stage>>> m_worlds;
             Stage m_currentStage{Stage::None};
             //std::vector<std::unique_ptr<tson::Map>> m_maps;
 

@@ -7,10 +7,10 @@
 
 #include "../../gamedev-base/GameDevBase.h"
 
-namespace dev
+namespace ggj
 {
 
-    class DummyDebugManager : public dev::IDebugManager
+    class DummyDebugManager : public ggj::IDebugManager
     {
         public:
             void clearText() override { }

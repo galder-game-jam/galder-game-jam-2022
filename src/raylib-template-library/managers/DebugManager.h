@@ -8,10 +8,10 @@
 #include "../../gamedev-base/GameDevBase.h"
 #include "raylib-cpp.hpp"
 #include <map>
-namespace dev
+namespace ggj
 {
 
-    class DebugManager : public dev::IDebugManager
+    class DebugManager : public ggj::IDebugManager
     {
         public:
             void setText(uint16_t line, const std::string &text, const Colori &color) override;

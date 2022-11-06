@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_VECTOR2D_HPP
 #define GAME_DEV_TEMPLATE_VECTOR2D_HPP
 
-namespace dev
+namespace ggj
 {
 
     template<typename T>

@@ -8,7 +8,7 @@
 #include "raylib-cpp.hpp"
 #include "../../gamedev-base/GameDevBase.h"
 
-namespace dev
+namespace ggj
 {
     class WorldLayer
     {
@@ -33,7 +33,7 @@ namespace dev
         private:
             int32_t m_layer {};
             bool m_disableUpdate {};
-            std::vector<std::unique_ptr<dev::IGameObject<raylib::Vector2>>> m_gameObjects;
+            std::vector<std::unique_ptr<ggj::IGameObject<raylib::Vector2>>> m_gameObjects;
     };
 
     template<typename T, typename... Args>

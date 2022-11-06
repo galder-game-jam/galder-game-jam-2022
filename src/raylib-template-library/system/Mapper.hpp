@@ -10,7 +10,7 @@
 #include "../enums/TextureName.h"
 #include "../enums/ResourceName.h"
 
-namespace dev
+namespace ggj
 {
     class Mapper : public IMapper
     {

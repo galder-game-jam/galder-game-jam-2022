@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_PHYSICSSHAPE_H
 #define GAME_DEV_TEMPLATE_PHYSICSSHAPE_H
 
-namespace dev
+namespace ggj
 {
 
     enum class PhysicsShape

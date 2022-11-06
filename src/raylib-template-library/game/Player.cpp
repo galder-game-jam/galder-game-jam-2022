@@ -4,7 +4,7 @@
 
 #include "Player.h"
 
-namespace dev
+namespace ggj
 {
     void Player::draw()
     {

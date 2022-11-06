@@ -4,7 +4,7 @@
 
 #include "Sprite.h"
 
-namespace dev
+namespace ggj
 {
     void Sprite::rotate(float degrees)
     {

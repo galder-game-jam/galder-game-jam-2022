@@ -12,13 +12,13 @@
 #include "fmt/format.h"
 #include "../enums/TextureName.h"
 
-namespace dev
+namespace ggj
 {
     class GameManager : public IGameManager
     {
         public:
-            explicit GameManager(dev::ILogger &logger, raylib::Window &window, IInputManager<dev::KeyboardKey> &input, IWorldManager &worlds,
-                                 dev::ITextureManager<TextureName, raylib::Texture> &textures, IDebugManager &debugManager)
+            explicit GameManager(ggj::ILogger &logger, raylib::Window &window, IInputManager<ggj::KeyboardKey> &input, IWorldManager &worlds,
+                                 ggj::ITextureManager<TextureName, raylib::Texture> &textures, IDebugManager &debugManager)
             : m_logger {logger}, m_window {window}, m_input {input}, m_worlds {worlds}, m_textures {textures}, m_debugManager {debugManager}
             {
 
@@ -32,9 +32,9 @@ namespace dev
 
             raylib::Window &m_window;
             ILogger &m_logger;
-            IInputManager<dev::KeyboardKey> &m_input;
+            IInputManager<ggj::KeyboardKey> &m_input;
             IWorldManager &m_worlds;
-            dev::ITextureManager<TextureName, raylib::Texture> &m_textures;
+            ggj::ITextureManager<TextureName, raylib::Texture> &m_textures;
             IDebugManager &m_debugManager;
 
             raylib::Vector2 m_originalWindowSize;

@@ -17,14 +17,14 @@
 #include "../graphics/PhysicsObject.h"
 #include "../RaylibTemplateLibrary.h"
 
-namespace dev
+namespace ggj
 {
-    class World : public dev::IWorld<Stage>
+    class World : public ggj::IWorld<Stage>
     {
         public:
-            World(dev::ILogger &logger, dev::IResourceManager<ResourceName> &resources, IMapper &mapper,
-                  dev::ITextureManager<TextureName, raylib::Texture> &textures,
-                  raylib::Window &window, dev::IInputManager<dev::KeyboardKey> &input, CollisionManager &collisionManager, IDebugManager &debugManager,
+            World(ggj::ILogger &logger, ggj::IResourceManager<ResourceName> &resources, IMapper &mapper,
+                  ggj::ITextureManager<TextureName, raylib::Texture> &textures,
+                  raylib::Window &window, ggj::IInputManager<ggj::KeyboardKey> &input, CollisionManager &collisionManager, IDebugManager &debugManager,
                   std::unique_ptr<tson::Map> map)
                     : m_logger{logger}, m_resources{resources}, m_mapper{mapper}, m_textures{textures}, m_window{window},
                     m_input {input}, m_collisionManager {collisionManager}, m_debugManager {debugManager}, m_map{std::move(map)}
@@ -40,14 +40,14 @@ namespace dev
             void draw() override;
 
         private:
-            dev::ILogger &m_logger;
-            dev::IResourceManager<ResourceName> &m_resources;
+            ggj::ILogger &m_logger;
+            ggj::IResourceManager<ResourceName> &m_resources;
             IMapper &m_mapper;
-            dev::ITextureManager<TextureName, raylib::Texture> &m_textures;
+            ggj::ITextureManager<TextureName, raylib::Texture> &m_textures;
             raylib::Window &m_window;
-            dev::IInputManager<dev::KeyboardKey> &m_input;
-            dev::CollisionManager &m_collisionManager;
-            dev::IDebugManager &m_debugManager;
+            ggj::IInputManager<ggj::KeyboardKey> &m_input;
+            ggj::CollisionManager &m_collisionManager;
+            ggj::IDebugManager &m_debugManager;
             raylib::Camera2D m_camera;
 
             Player *m_player = nullptr;
@@ -56,7 +56,7 @@ namespace dev
             std::unique_ptr<tson::Map> m_map{nullptr};
 
             raylib::Color m_backgroundColor = raylib::Color::White();
-            std::map<int32_t, dev::WorldLayer> m_layers;
+            std::map<int32_t, ggj::WorldLayer> m_layers;
 
     };
 }

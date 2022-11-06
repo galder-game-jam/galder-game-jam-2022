@@ -4,7 +4,7 @@
 
 #include "WorldLayer.h"
 
-namespace dev
+namespace ggj
 {
     int32_t WorldLayer::getLayer() const
     {

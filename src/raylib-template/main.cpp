@@ -34,24 +34,24 @@ std::filesystem::path abs_exe_directory()
     #endif
 }
 
-auto buildInjector(dev::ILogger &logger, raylib::Window &window)
+auto buildInjector(ggj::ILogger &logger, raylib::Window &window)
 {
     auto injector = boost::di::make_injector(
-            boost::di::bind<dev::IGameManager>().to<dev::GameManager>(),
-            boost::di::bind<dev::IWorldManager>().to<dev::WorldManager>(),
-            boost::di::bind<dev::ITextureManager<dev::TextureName, raylib::Texture>>().to<dev::TextureManager>(),
-            boost::di::bind<dev::IMapper>().to<dev::Mapper>(),
-            boost::di::bind<dev::IInputManager<dev::KeyboardKey>>().to<dev::InputManager>(),
-            boost::di::bind<dev::IResourceManager<dev::ResourceName>>().to<dev::ResourceManager<dev::ResourceName>>(),
-            boost::di::bind<dev::IExecutableInfo>().to<dev::ExecutableInfo>(),
+            boost::di::bind<ggj::IGameManager>().to<ggj::GameManager>(),
+            boost::di::bind<ggj::IWorldManager>().to<ggj::WorldManager>(),
+            boost::di::bind<ggj::ITextureManager<ggj::TextureName, raylib::Texture>>().to<ggj::TextureManager>(),
+            boost::di::bind<ggj::IMapper>().to<ggj::Mapper>(),
+            boost::di::bind<ggj::IInputManager<ggj::KeyboardKey>>().to<ggj::InputManager>(),
+            boost::di::bind<ggj::IResourceManager<ggj::ResourceName>>().to<ggj::ResourceManager<ggj::ResourceName>>(),
+            boost::di::bind<ggj::IExecutableInfo>().to<ggj::ExecutableInfo>(),
             #ifdef GAME_DEV_DEBUG
-            boost::di::bind<dev::IDebugManager>().to<dev::DebugManager>(),
+            boost::di::bind<ggj::IDebugManager>().to<ggj::DebugManager>(),
             #else
-            boost::di::bind<dev::IDebugManager>().to<dev::DummyDebugManager>(),
+            boost::di::bind<ggj::IDebugManager>().to<ggj::DummyDebugManager>(),
             #endif
-            boost::di::bind<dev::CollisionManager>(),
+            boost::di::bind<ggj::CollisionManager>(),
             boost::di::bind<raylib::Window>().to(window),
-            boost::di::bind<dev::ILogger>().to(logger)//.to(dev::ConsoleLogger(dev::LogLevel::Error))
+            boost::di::bind<ggj::ILogger>().to(logger)//.to(ggj::ConsoleLogger(ggj::LogLevel::Error))
     );
 
     return injector;
@@ -59,10 +59,10 @@ auto buildInjector(dev::ILogger &logger, raylib::Window &window)
 
 struct App
 {
-    dev::ILogger &logger;
-    dev::IExecutableInfo &executableInfo;
-    dev::IGameManager &game;
-    dev::IResourceManager<dev::ResourceName> &resources;
+    ggj::ILogger &logger;
+    ggj::IExecutableInfo &executableInfo;
+    ggj::IGameManager &game;
+    ggj::IResourceManager<ggj::ResourceName> &resources;
     raylib::Window &window;
 
     bool initialize()
@@ -81,12 +81,12 @@ int main(int argc, char **argv)
     int screenWidth = 400;
     int screenHeight = 240;
     raylib::Window window {screenWidth, screenHeight, "Raylib Template"};
-    dev::ConsoleLogger l = dev::ConsoleLogger(dev::LogLevel::Debug);
+    ggj::ConsoleLogger l = ggj::ConsoleLogger(ggj::LogLevel::Debug);
 
     //Handle dependency injection
     auto injector = buildInjector(l, window);
     App app = injector.create<App>();
-    dev::ILogger &logger = app.logger;//game.getLogger();
+    ggj::ILogger &logger = app.logger;//game.getLogger();
     app.window.SetTitle("Hello there");
 
     //Initialize everything
@@ -101,7 +101,7 @@ int main(int argc, char **argv)
     //raylib::Texture logo("raylib_logo.png");
 
     SetTargetFPS(60);
-    dev::Timer timer;
+    ggj::Timer timer;
     while (!window.ShouldClose())
     {
         float timeDelta = timer.secondsElapsed();

@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_TEXTURENAME_H
 #define GAME_DEV_TEMPLATE_TEXTURENAME_H
 
-namespace dev
+namespace ggj
 {
     enum class TextureName
     {

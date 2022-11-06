@@ -11,7 +11,7 @@
 #include "../../gamedev-base/GameDevBase.h"
 #include "PhysicsObject.h"
 
-namespace dev
+namespace ggj
 {
 
     class PhysicsSprite : public PhysicsObject

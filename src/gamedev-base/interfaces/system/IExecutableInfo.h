@@ -7,7 +7,7 @@
 
 #include <string>
 #include <filesystem>
-namespace dev
+namespace ggj
 {
     class IExecutableInfo
     {

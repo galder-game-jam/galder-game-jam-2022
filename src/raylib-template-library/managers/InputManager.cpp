@@ -5,20 +5,20 @@
 #include "InputManager.h"
 #include "../enums/KeyboardKey.h"
 
-namespace dev
+namespace ggj
 {
-    bool InputManager::keyPressed(dev::KeyboardKey key)
+    bool InputManager::keyPressed(ggj::KeyboardKey key)
     {
         return keyPressedCode((int16_t) key);
     }
 
-    bool InputManager::keysPressed(const std::vector<dev::KeyboardKey> &keys)
+    bool InputManager::keysPressed(const std::vector<ggj::KeyboardKey> &keys)
     {
         bool allPressed = true;
         if(keys.empty())
             allPressed = false;
 
-        for(dev::KeyboardKey key : keys)
+        for(ggj::KeyboardKey key : keys)
         {
             if(!keyPressed(key))
                 return false;
@@ -47,18 +47,18 @@ namespace dev
         return allPressed;
     }
 
-    bool InputManager::keyReleased(dev::KeyboardKey key)
+    bool InputManager::keyReleased(ggj::KeyboardKey key)
     {
         return keyReleasedCode((int16_t) key);
     }
 
-    bool InputManager::keysReleased(const std::vector<dev::KeyboardKey> &keys)
+    bool InputManager::keysReleased(const std::vector<ggj::KeyboardKey> &keys)
     {
         bool allReleased = true;
         if(keys.empty())
             allReleased = false;
 
-        for(dev::KeyboardKey key : keys)
+        for(ggj::KeyboardKey key : keys)
         {
             if(!keyReleased(key))
                 return false;
@@ -93,13 +93,13 @@ namespace dev
         return keyDownCode((int16_t) key);
     }
 
-    bool InputManager::keysDown(const std::vector<dev::KeyboardKey> &keys)
+    bool InputManager::keysDown(const std::vector<ggj::KeyboardKey> &keys)
     {
         bool allDown = true;
         if(keys.empty())
             allDown = false;
 
-        for(dev::KeyboardKey key : keys)
+        for(ggj::KeyboardKey key : keys)
         {
             if(!keyDownCode((int16_t) key))
                 return false;
@@ -133,13 +133,13 @@ namespace dev
         return keyUpCode((int16_t) key);
     }
 
-    bool InputManager::keysUp(const std::vector<dev::KeyboardKey> &keys)
+    bool InputManager::keysUp(const std::vector<ggj::KeyboardKey> &keys)
     {
         bool allUp = true;
         if(keys.empty())
             allUp = false;
 
-        for(dev::KeyboardKey key : keys)
+        for(ggj::KeyboardKey key : keys)
         {
             if(!keyUpCode((int16_t) key))
                 return false;

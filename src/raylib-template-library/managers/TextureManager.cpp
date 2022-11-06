@@ -4,7 +4,7 @@
 
 #include "TextureManager.h"
 
-namespace dev
+namespace ggj
 {
     bool TextureManager::initialize()
     {

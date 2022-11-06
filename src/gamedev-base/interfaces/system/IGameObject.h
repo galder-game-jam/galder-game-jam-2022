@@ -7,7 +7,7 @@
 
 #include "../../system/Vector2D.hpp"
 
-namespace dev
+namespace ggj
 {
     template <class T>
     class IGameObject

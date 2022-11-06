@@ -9,7 +9,7 @@
 #include <chrono>
 #include "../interfaces/system/ITimer.h"
 
-namespace dev
+namespace ggj
 {
     class Timer : public ITimer
     {

@@ -7,7 +7,7 @@
 #include "../../src/raylib-template-library/RaylibTemplateLibrary.h"
 
 using namespace fakeit;
-using namespace dev;
+using namespace ggj;
 
 TEST_CASE( "Test Logger levels - Expect only logs that should be displayed", "[logger]" )
 {

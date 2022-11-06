@@ -4,7 +4,7 @@
 
 #include "WorldManager.h"
 
-namespace dev
+namespace ggj
 {
     bool WorldManager::initialize()
     {
@@ -72,8 +72,8 @@ namespace dev
     void WorldManager::update(float timeDelta)
     {
         #ifdef GAME_DEV_DEBUG
-        if (m_input.keyPressed(dev::KeyboardKey::F1)) m_currentStage = Stage::Stage1;
-        if (m_input.keyPressed(dev::KeyboardKey::F2)) m_currentStage = Stage::Stage2;
+        if (m_input.keyPressed(ggj::KeyboardKey::F1)) m_currentStage = Stage::Stage1;
+        if (m_input.keyPressed(ggj::KeyboardKey::F2)) m_currentStage = Stage::Stage2;
         #endif
 
         if (m_currentStage == Stage::None)

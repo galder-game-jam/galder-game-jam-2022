@@ -5,7 +5,7 @@
 #ifndef GAME_DEV_TEMPLATE_ITEXTUREMANAGER_H
 #define GAME_DEV_TEMPLATE_ITEXTUREMANAGER_H
 
-namespace dev
+namespace ggj
 {
     template <class TId, class TTexture>
     class ITextureManager

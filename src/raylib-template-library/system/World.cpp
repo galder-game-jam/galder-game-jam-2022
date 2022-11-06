@@ -6,7 +6,7 @@
 #include "../graphics/Sprite.h"
 #include "../graphics/PhysicsSprite.h"
 
-namespace dev
+namespace ggj
 {
     bool World::initialize()
     {
@@ -44,7 +44,7 @@ namespace dev
                             raylib::Vector2 origin = {(float)rect.width / 2, (float)rect.height / 2};
                             raylib::Vector2 v = {pos.x + origin.x, pos.y + origin.y};
                             raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
-                            m_layers[layerIndex].createGameObject<dev::Sprite>(v, r, tex);
+                            m_layers[layerIndex].createGameObject<ggj::Sprite>(v, r, tex);
                         }
                     }
                 }
@@ -133,7 +133,7 @@ namespace dev
 
                         raylib::Color color = isStatic ? RED : DARKPURPLE;
                         if(sprite.empty())
-                            m_layers[layerIndex].createGameObject<dev::PhysicsObject>(body, raylib::Vector2((float)size.x, (float)size.y), shape, color, isVisible);
+                            m_layers[layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2((float)size.x, (float)size.y), shape, color, isVisible);
                         else
                         {
                             TextureName id = m_mapper.getTextureNameByString(sprite);
@@ -149,11 +149,11 @@ namespace dev
 
                                     if(isPlayer)
                                     {
-                                        m_player = m_layers[layerIndex].createGameObject<dev::Player>(m_input, body, raylib::Vector2((float) size.x, (float) size.y), r,
+                                        m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, body, raylib::Vector2((float) size.x, (float) size.y), r,
                                                                                                   tex);
                                     }
                                     else
-                                        m_layers[layerIndex].createGameObject<dev::PhysicsSprite>(body, raylib::Vector2((float) size.x, (float) size.y), r,
+                                        m_layers[layerIndex].createGameObject<ggj::PhysicsSprite>(body, raylib::Vector2((float) size.x, (float) size.y), r,
                                                                                               tex);
                                 }
                             }

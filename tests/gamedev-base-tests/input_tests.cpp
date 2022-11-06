@@ -7,33 +7,33 @@
 #include "../../src/raylib-template-library/RaylibTemplateLibrary.h"
 
 using namespace fakeit;
-using namespace dev;
+using namespace ggj;
 
 TEST_CASE( "Test input manager by faking keyPressed - Expect 'A'-key returned as pressed, and 'B' as not pressed", "[input]" )
 {
-    Mock<IInputManager<dev::KeyboardKey>> fakeInput;
+    Mock<IInputManager<ggj::KeyboardKey>> fakeInput;
     Fake(Method(fakeInput, keyPressed));
-    When(Method(fakeInput, keyPressed).Using(dev::KeyboardKey::A)).Return(true);
-    IInputManager<dev::KeyboardKey> &input = fakeInput.get();
+    When(Method(fakeInput, keyPressed).Using(ggj::KeyboardKey::A)).Return(true);
+    IInputManager<ggj::KeyboardKey> &input = fakeInput.get();
 
-    REQUIRE(input.keyPressed(dev::KeyboardKey::A));
-    REQUIRE(!input.keyPressed(dev::KeyboardKey::B));
+    REQUIRE(input.keyPressed(ggj::KeyboardKey::A));
+    REQUIRE(!input.keyPressed(ggj::KeyboardKey::B));
 }
 
 TEST_CASE( "Test lambda called when input has been queried - Expect variable changed after call", "[input]" )
 {
     std::string str;
 
-    Mock<IInputManager<dev::KeyboardKey>> fakeInput;
+    Mock<IInputManager<ggj::KeyboardKey>> fakeInput;
     Fake(Method(fakeInput, keyPressed));
-    When(Method(fakeInput, keyPressed).Using(dev::KeyboardKey::A)).AlwaysDo([&](dev::KeyboardKey key)
+    When(Method(fakeInput, keyPressed).Using(ggj::KeyboardKey::A)).AlwaysDo([&](ggj::KeyboardKey key)
     {
         str = "'A' was pressed!";
         return true;
     });
-    IInputManager<dev::KeyboardKey> &input = fakeInput.get();
+    IInputManager<ggj::KeyboardKey> &input = fakeInput.get();
 
     REQUIRE(str.empty());
-    REQUIRE(input.keyPressed(dev::KeyboardKey::A));
+    REQUIRE(input.keyPressed(ggj::KeyboardKey::A));
     REQUIRE(str == "'A' was pressed!");
 }

@@ -10,7 +10,7 @@
 #include "fmt/color.h"
 #include "fmt/ostream.h"
 #include "fmt/chrono.h"
-namespace dev
+namespace ggj
 {
 
     class ConsoleLogger : public ILogger

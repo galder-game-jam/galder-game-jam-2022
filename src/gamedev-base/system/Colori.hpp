@@ -9,7 +9,7 @@
 #include <cstdint>
 #include <string>
 
-namespace dev
+namespace ggj
 {
     /*!
      * Using Colori (Color Int) not to interfere with the raylib definition of "Color"

@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-namespace dev
+namespace ggj
 {
     enum class LogLevel : uint8_t
     {

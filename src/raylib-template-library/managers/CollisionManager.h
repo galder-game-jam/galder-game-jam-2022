@@ -7,7 +7,7 @@
 
 #include "box2d/box2d.h"
 
-namespace dev
+namespace ggj
 {
 
     class CollisionManager : public b2ContactListener

@@ -4,7 +4,7 @@
 
 #include "ConsoleLogger.h"
 
-namespace dev
+namespace ggj
 {
     void ConsoleLogger::log(const std::string &msg, LogLevel level)
     {
