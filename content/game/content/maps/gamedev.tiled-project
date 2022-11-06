@@ -1,0 +1,43 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "propertyTypes": [
+        {
+            "color": "#ffff0000",
+            "id": 1,
+            "members": [
+                {
+                    "name": "is_player",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "is_static",
+                    "type": "bool",
+                    "value": true
+                },
+                {
+                    "name": "is_trigger",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "sprite",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "PhysicsObject",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object"
+            ]
+        }
+    ]
+}

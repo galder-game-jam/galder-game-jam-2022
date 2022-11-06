@@ -1,0 +1,5 @@
+This file is a game design document template distributed freely at https://toddmitchell.itch.io/game-design-document. It was initially uploaded for reference in a game prototyping article commissioned by patron Charlie Cox at https://patreon.com/codewriteplay.
+
+For a long time I highly recommended the document template made available at https://vitalzigns.itch.io (and by all means, check theirs out, you may find that you prefer it) but have since tweaked a variety of documents to suit my needs, match my preferred style, and leverage Word's automated formatting features (including the automatic Table of Contents) to the best of my ability. The file I've made available matches my latest preferred format, and the one I'll be using in my post at Patreon. 
+
+For questions or feedback, please don't hesitate to contact me through Itch.io, via e-mail at Todd@CodeWritePlay.com, or catch me on Twitter @mechatodzilla
