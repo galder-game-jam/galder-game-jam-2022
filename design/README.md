@@ -1,5 +1,6 @@
 # Game Design Document (GDD)
 
+[Brainstorming](brainstorming/README.md)
 
 | [![](../content/graphics/icons/technical.png)](technical/README.md) | [![](../content/graphics/icons/marketing.png)](marketing/README.md)| [![](../content/graphics/icons/art-and-sound.png)](art-and-sound/README.md) | [![](../content/graphics/icons/story.png)](story/README.md) |
 |-|-|-|-|
@@ -18,3 +19,4 @@
 |-|-|-|-|
 |-|-|-|-|
 |-|-|-|-|
+
