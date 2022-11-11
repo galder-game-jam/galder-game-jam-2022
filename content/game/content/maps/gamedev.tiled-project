@@ -30,6 +30,16 @@
                     "name": "sprite",
                     "type": "string",
                     "value": ""
+                },
+                {
+                    "name": "sprite_size_x",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "sprite_size_y",
+                    "type": "int",
+                    "value": 0
                 }
             ],
             "name": "PhysicsObject",

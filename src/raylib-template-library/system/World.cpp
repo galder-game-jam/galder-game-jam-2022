@@ -78,6 +78,8 @@ namespace ggj
                         bool isTrigger = c->get<bool>("is_trigger");
                         bool isPlayer = c->get<bool>("is_player");
                         std::string sprite = c->get<std::string>("sprite");
+                        int spriteSizeX = c->get<int>("sprite_size_x");
+                        int spriteSizeY = c->get<int>("sprite_size_y");
 
                         //RBP: Note to self: Improve Tileson so this was handled automatically in the TiledClass.
                         for(auto &[key, value] : obj.getProperties().getProperties())
@@ -90,6 +92,10 @@ namespace ggj
                                 isPlayer = value.getValue<bool>();
                             else if(key == "sprite")
                                 sprite = value.getValue<std::string>();
+                            else if(key == "sprite_size_x")
+                                spriteSizeX = value.getValue<int>();
+                            else if(key == "sprite_size_y")
+                                spriteSizeY = value.getValue<int>();
                         }
 
                         bool isVisible = !isStatic;
@@ -157,15 +163,27 @@ namespace ggj
                                     raylib::Rectangle rect = {0.f, 0.f, (float)originalSize.x, (float)originalSize.y};
                                     raylib::Vector2 origin = {(float)rect.width / 2, (float)rect.height / 2};
                                     raylib::Vector2 v = {(float)pos.x + origin.x, (float)pos.y + origin.y};
+
                                     raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
+
+
+                                    if(spriteSizeX != 0 && spriteSizeY != 0)
+                                    {
+                                        r.width = (float)spriteSizeX;
+                                        r.height = (float)spriteSizeY;
+                                    }
+
+                                    raylib::Vector2 offset = raylib::Vector2(r.width - rect.width, r.height - rect.height);
+
+                                    raylib::Vector2 spriteSize = raylib::Vector2(r.width, r.height);
 
                                     if(isPlayer)
                                     {
-                                        m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, body, raylib::Vector2((float) size.x, (float) size.y), r,
+                                        m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
                                                                                                   tex);
                                     }
                                     else
-                                        m_layers[layerIndex].createGameObject<ggj::PhysicsSprite>(body, raylib::Vector2((float) size.x, (float) size.y), r,
+                                        m_layers[layerIndex].createGameObject<ggj::PhysicsSprite>(body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
                                                                                               tex);
                                 }
                             }

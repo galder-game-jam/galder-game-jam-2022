@@ -14,9 +14,10 @@ namespace ggj
     {
         public:
             Player() = default;
-            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, b2Body *body, const raylib::Vector2 &size,
+            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, b2Body *body, const raylib::Vector2 &physicsSize,
+                   const raylib::Vector2 &spriteSize,
                    const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
-            : PhysicsSprite(body, size, drawingRect, texture, isVisible), m_inputManager {inputManager}
+            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, isVisible), m_inputManager {inputManager}
             {
                 m_body->SetFixedRotation(true);
             }

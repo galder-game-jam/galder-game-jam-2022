@@ -18,11 +18,12 @@ namespace ggj
     {
         public:
             PhysicsSprite() = default;
-            PhysicsSprite(b2Body *body, const raylib::Vector2 &size, const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
-            : PhysicsObject(body, size, (body->GetFixtureList()[0].GetShape()->GetType() == b2Shape::e_circle) ? PhysicsShape::Circle : PhysicsShape::Rectangle, isVisible),
-              m_drawingRect {drawingRect}, m_texture {texture}
+            PhysicsSprite(b2Body *body, const raylib::Vector2 &physicsSize, const raylib::Vector2 &spriteSize, const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
+            : PhysicsObject(body, physicsSize, (body->GetFixtureList()[0].GetShape()->GetType() == b2Shape::e_circle) ? PhysicsShape::Circle : PhysicsShape::Rectangle, isVisible),
+              m_spriteSize{spriteSize}, m_drawingRect {drawingRect}, m_texture {texture}
             {
                 m_origin = raylib::Vector2(drawingRect.width / 2, drawingRect.height / 2);
+                m_offset = raylib::Vector2(spriteSize.x - .x, spriteSize.y - physicsSize.y);
             }
             void draw() override;
 
@@ -30,6 +31,8 @@ namespace ggj
             raylib::Texture *m_texture {nullptr};
             raylib::Rectangle m_drawingRect;
             bool m_flip {false};
+            raylib::Vector2 m_spriteSize {0.f, 0.f};
+            raylib::Vector2 m_offset {0.f, 0.f};
     };
 
 } // dev

@@ -17,6 +17,7 @@ namespace ggj
         public:
             Mapper()
             {
+                m_strToTex["characters.png"] = TextureName::Player;
                 m_strToTex["sheet.png"] = TextureName::Tileset1;
                 m_strToTex["tiles.png"] = TextureName::Tileset2;
                 m_strToTex["boulder-small.png"] = TextureName::BoulderSmall;
@@ -24,6 +25,7 @@ namespace ggj
                 m_strToTex["player-simple.png"] = TextureName::PlayerSimple;
                 m_strToTex["magic-cliffs.png"] = TextureName::MagicCliffsTileset;
 
+                m_texToRes[TextureName::Player] = ResourceName::GraphicsPlayer;
                 m_texToRes[TextureName::Tileset1] = ResourceName::GraphicsTileset1;
                 m_texToRes[TextureName::Tileset2] = ResourceName::GraphicsTileset2;
                 m_texToRes[TextureName::BoulderSmall] = ResourceName::GraphicsBoulderSmall;

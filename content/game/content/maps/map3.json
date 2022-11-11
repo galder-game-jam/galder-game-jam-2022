@@ -327,7 +327,17 @@
                         {
                          "name":"sprite",
                          "type":"string",
-                         "value":"player-simple.png"
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
                         }],
                  "rotation":0,
                  "visible":true,
