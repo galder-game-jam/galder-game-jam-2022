@@ -50,6 +50,10 @@ namespace ggj
             ggj::IDebugManager &m_debugManager;
             raylib::Camera2D m_camera;
 
+            raylib::Vector2 m_cameraMin {0.f, 0.f};
+            raylib::Vector2 m_cameraMax {0.f, 0.f};
+            raylib::Vector2 m_cameraDefault {0.f, 0.f};
+
             Player *m_player = nullptr;
 
             b2World m_world{{0.f, 0.f}};

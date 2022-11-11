@@ -42,6 +42,7 @@ namespace ggj
         add(ggj::ResourceName::GraphicsBoulderMedium, "graphics/boulder-medium.png");
         add(ggj::ResourceName::GraphicsBoulderBig, "graphics/boulder-big.png");
         add(ggj::ResourceName::GraphicsAndre, "graphics/andre.png");
+        add(ggj::ResourceName::GraphicsMagicCliffsTileset, "graphics/magic-cliffs.png");
         add(ggj::ResourceName::MapProject, "maps/gamedev.tiled-project");
     }
 

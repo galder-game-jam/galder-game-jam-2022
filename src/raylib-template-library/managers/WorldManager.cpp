@@ -74,6 +74,7 @@ namespace ggj
         #ifdef GAME_DEV_DEBUG
         if (m_input.keyPressed(ggj::KeyboardKey::F1)) m_currentStage = Stage::Stage1;
         if (m_input.keyPressed(ggj::KeyboardKey::F2)) m_currentStage = Stage::Stage2;
+        if (m_input.keyPressed(ggj::KeyboardKey::F3)) m_currentStage = Stage::Stage3;
         #endif
 
         if (m_currentStage == Stage::None)
@@ -100,6 +101,7 @@ namespace ggj
     {
         if (filename == "map1.json") return Stage::Stage1;
         if (filename == "map2.json") return Stage::Stage2;
+        if (filename == "map3.json") return Stage::Stage3;
 
         return Stage::None;
     }

@@ -20,6 +20,18 @@ namespace ggj
         {
             m_world.SetGravity({m_map->get<float>("gravity_x"), m_map->get<float>("gravity_y")});
         }
+        if(m_map->getProp("camera_min_x") != nullptr && m_map->getProp("camera_min_y") != nullptr)
+        {
+            m_cameraMin = raylib::Vector2(m_map->get<float>("camera_min_x"), m_map->get<float>("camera_min_y"));
+            m_camera.target = raylib::Vector2(m_cameraMin.GetX(), m_camera.target.y);
+        }
+        if(m_map->getProp("camera_max_x") != nullptr && m_map->getProp("camera_max_y") != nullptr)
+        {
+            m_cameraMax = raylib::Vector2(m_map->get<float>("camera_max_x"), m_map->get<float>("camera_max_y"));
+            m_camera.target = raylib::Vector2(m_camera.target.x, m_cameraMax.GetY());
+        }
+
+        m_cameraDefault = m_camera.target;
 
         int32_t layerIndex = 0;
         for (auto &layer: m_map->getLayers())
@@ -182,10 +194,20 @@ namespace ggj
 
             m_camera.target = (m_player->cameraShouldFollowPlayer())
                     ? raylib::Vector2((float)(int)(std::round(m_player->getPosition().x) - (float)400.f / 2), (float)(int)(std::round(m_player->getPosition().y) - (float)240.f / 2))
-                    : raylib::Vector2(0.f, 0.f);
+                    : m_cameraDefault;
 
             m_debugManager.setText(1, fmt::format("PlayerPos: ({0}, {1})", (int) m_player->getPosition().x, (int) m_player->getPosition().y));
+            m_debugManager.setText(2, fmt::format("CameraPos: ({0}, {1})", (int) m_camera.target.x, (int) m_camera.target.y));
         }
+
+        if(m_camera.target.x > m_cameraMax.x)
+            m_camera.target.x = m_cameraMax.x;
+        if(m_camera.target.x < m_cameraMin.x)
+            m_camera.target.x = m_cameraMin.x;
+        if(m_camera.target.y > m_cameraMax.y)
+            m_camera.target.y = m_cameraMax.y;
+        if(m_camera.target.y < m_cameraMin.y)
+            m_camera.target.y = m_cameraMin.y;
     }
 
     void World::draw()

@@ -22,12 +22,14 @@ namespace ggj
                 m_strToTex["boulder-small.png"] = TextureName::BoulderSmall;
                 m_strToTex["andre.png"] = TextureName::Andre;
                 m_strToTex["player-simple.png"] = TextureName::PlayerSimple;
+                m_strToTex["magic-cliffs.png"] = TextureName::MagicCliffsTileset;
 
                 m_texToRes[TextureName::Tileset1] = ResourceName::GraphicsTileset1;
                 m_texToRes[TextureName::Tileset2] = ResourceName::GraphicsTileset2;
                 m_texToRes[TextureName::BoulderSmall] = ResourceName::GraphicsBoulderSmall;
                 m_texToRes[TextureName::Andre] = ResourceName::GraphicsAndre;
                 m_texToRes[TextureName::PlayerSimple] = ResourceName::GraphicsPlayerSimple;
+                m_texToRes[TextureName::MagicCliffsTileset] = ResourceName::GraphicsMagicCliffsTileset;
             };
 
             TextureName getTextureNameByString(const std::string &id) override

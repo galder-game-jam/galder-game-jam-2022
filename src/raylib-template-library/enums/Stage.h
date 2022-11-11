@@ -11,7 +11,8 @@ namespace ggj
     {
         None = 0,
         Stage1 = 1,
-        Stage2 = 2
+        Stage2 = 2,
+        Stage3 = 3,
     };
 }
 #endif //GAME_DEV_TEMPLATE_STAGE_H

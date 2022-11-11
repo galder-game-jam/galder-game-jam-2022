@@ -10,6 +10,7 @@ namespace ggj
     {
         loadTexture(TextureName::Tileset1);
         loadTexture(TextureName::Tileset2);
+        loadTexture(TextureName::MagicCliffsTileset);
 
         return true;
     }

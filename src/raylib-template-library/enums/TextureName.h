@@ -17,7 +17,8 @@ namespace ggj
         Tileset1 = 5,
         Tileset2 = 6,
         Andre = 7,
-        PlayerSimple = 8
+        PlayerSimple = 8,
+        MagicCliffsTileset = 9,
     };
 }
 #endif //GAME_DEV_TEMPLATE_TEXTURENAME_H

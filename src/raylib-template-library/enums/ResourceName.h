@@ -31,7 +31,8 @@ namespace ggj
         GraphicsTileset2 = 6,
         MapProject = 7,
         GraphicsAndre = 8,
-        GraphicsPlayerSimple = 9
+        GraphicsPlayerSimple = 9,
+        GraphicsMagicCliffsTileset = 10,
     };
 }
 
