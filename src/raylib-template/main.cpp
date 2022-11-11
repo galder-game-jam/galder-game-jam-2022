@@ -1,38 +1,8 @@
-#include <iostream>
 #include "../raylib-template-library/RaylibTemplateLibrary.h"
 #include "di.hpp"
-#include "fmt/printf.h"
 #include "fmt/color.h"
 #include "raylib-cpp.hpp"
 
-#include <filesystem>
-
-//Returns the absolute path of the executable
-std::filesystem::path abs_exe_path()
-{
-    #if defined(_MSC_VER)
-    wchar_t path[FILENAME_MAX] = { 0 };
-        GetModuleFileNameW(nullptr, path, FILENAME_MAX);
-        return std::filesystem::path(path);
-    #else
-    char path[FILENAME_MAX];
-    ssize_t count = readlink("/proc/self/exe", path, FILENAME_MAX);
-    return std::filesystem::path(std::string(path, (count > 0) ? count: 0));
-    #endif
-}
-
-std::filesystem::path abs_exe_directory()
-{
-    #if defined(_MSC_VER)
-    wchar_t path[FILENAME_MAX] = { 0 };
-        GetModuleFileNameW(nullptr, path, FILENAME_MAX);
-        return std::filesystem::path(path).parent_path().string();
-    #else
-    char path[FILENAME_MAX];
-    ssize_t count = readlink("/proc/self/exe", path, FILENAME_MAX);
-    return std::filesystem::path(std::string(path, (count > 0) ? count: 0)).parent_path().string();
-    #endif
-}
 
 auto buildInjector(ggj::ILogger &logger, raylib::Window &window)
 {
@@ -87,7 +57,7 @@ int main(int argc, char **argv)
     auto injector = buildInjector(l, window);
     App app = injector.create<App>();
     ggj::ILogger &logger = app.logger;//game.getLogger();
-    app.window.SetTitle("Hello there");
+    app.window.SetTitle("Galderino's Gamo Jammo");
 
     //Initialize everything
     if(!app.initialize())
