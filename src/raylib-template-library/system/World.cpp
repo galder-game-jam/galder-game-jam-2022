@@ -16,16 +16,16 @@ namespace ggj
         tson::Colori bg = m_map->getBackgroundColor();
         m_backgroundColor = raylib::Color(bg.r, bg.g, bg.b, bg.a);
         m_world.SetContactListener(&m_collisionManager);
-        if(m_map->getProp("gravity_x") != nullptr && m_map->getProp("gravity_y") != nullptr)
+        if (m_map->getProp("gravity_x") != nullptr && m_map->getProp("gravity_y") != nullptr)
         {
             m_world.SetGravity({m_map->get<float>("gravity_x"), m_map->get<float>("gravity_y")});
         }
-        if(m_map->getProp("camera_min_x") != nullptr && m_map->getProp("camera_min_y") != nullptr)
+        if (m_map->getProp("camera_min_x") != nullptr && m_map->getProp("camera_min_y") != nullptr)
         {
             m_cameraMin = raylib::Vector2(m_map->get<float>("camera_min_x"), m_map->get<float>("camera_min_y"));
             m_camera.target = raylib::Vector2(m_cameraMin.GetX(), m_camera.target.y);
         }
-        if(m_map->getProp("camera_max_x") != nullptr && m_map->getProp("camera_max_y") != nullptr)
+        if (m_map->getProp("camera_max_x") != nullptr && m_map->getProp("camera_max_y") != nullptr)
         {
             m_cameraMax = raylib::Vector2(m_map->get<float>("camera_max_x"), m_map->get<float>("camera_max_y"));
             m_camera.target = raylib::Vector2(m_camera.target.x, m_cameraMax.GetY());
@@ -39,7 +39,7 @@ namespace ggj
 
             if (layer.getType() == tson::LayerType::TileLayer)
             {
-                if(m_layers.count(layerIndex) == 0)
+                if (m_layers.count(layerIndex) == 0)
                     m_layers[layerIndex] = {layerIndex, true}; //Tiles are only for drawing and will not be updated
 
                 for (auto &tileObject: layer.getTileObjects())
@@ -51,9 +51,9 @@ namespace ggj
                     if (id != TextureName::None)
                     {
                         raylib::Texture *tex = m_textures.get(id);
-                        if(tex != nullptr)
+                        if (tex != nullptr)
                         {
-                            raylib::Vector2 origin = {(float)rect.width / 2, (float)rect.height / 2};
+                            raylib::Vector2 origin = {(float) rect.width / 2, (float) rect.height / 2};
                             raylib::Vector2 v = {pos.x + origin.x, pos.y + origin.y};
                             raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
                             m_layers[layerIndex].createGameObject<ggj::Sprite>(v, r, tex);
@@ -63,18 +63,18 @@ namespace ggj
             }
             else if (layer.getType() == tson::LayerType::ObjectGroup)
             {
-                if(m_layers.count(layerIndex) == 0)
+                if (m_layers.count(layerIndex) == 0)
                     m_layers[layerIndex] = {layerIndex, false}; //Objects will have their positions updated!
 
-                for(auto &obj : layer.getObjects())
+                for (auto &obj: layer.getObjects())
                 {
                     tson::TiledClass *c = obj.getClass();
-                    if(c == nullptr)
+                    if (c == nullptr)
                         continue;
 
-                    if(c->getMember("is_static") != nullptr && c->getMember("is_trigger") != nullptr)
+                    if (c->getMember("is_static") != nullptr && c->getMember("is_trigger") != nullptr)
                     {
-                        ObjectGeneratorData generatorData {};
+                        ObjectGeneratorData generatorData{};
 
                         generatorData.layerIndex = layerIndex;
                         generatorData.obj = obj;
@@ -85,8 +85,8 @@ namespace ggj
                         generatorData.isKinematic = c->get<bool>("is_kinematic");
                         generatorData.isPlayer = c->get<bool>("is_player");
                         generatorData.sprite = c->get<std::string>("sprite");
-                        generatorData.spriteSize.x = (float)c->get<int>("sprite_size_x");
-                        generatorData.spriteSize.y = (float)c->get<int>("sprite_size_y");
+                        generatorData.spriteSize.x = (float) c->get<int>("sprite_size_x");
+                        generatorData.spriteSize.y = (float) c->get<int>("sprite_size_y");
                         generatorData.velocity.x = c->get<float>("velocity_x");
                         generatorData.velocity.y = c->get<float>("velocity_y");
 
@@ -96,62 +96,62 @@ namespace ggj
                         std::string userdataCommand = c->get<std::string>("userdata_command");
 
                         //RBP: Note to self: Improve Tileson so this was handled automatically in the TiledClass.
-                        for(auto &[key, value] : obj.getProperties().getProperties())
+                        for (auto &[key, value]: obj.getProperties().getProperties())
                         {
-                            if(key == "is_static")
+                            if (key == "is_static")
                                 generatorData.isStatic = value.getValue<bool>();
-                            else if(key == "is_trigger")
+                            else if (key == "is_trigger")
                                 generatorData.isTrigger = value.getValue<bool>();
-                            else if(key == "is_player")
+                            else if (key == "is_player")
                                 generatorData.isPlayer = value.getValue<bool>();
-                            else if(key == "sprite")
+                            else if (key == "sprite")
                                 generatorData.sprite = value.getValue<std::string>();
-                            else if(key == "sprite_size_x")
-                                generatorData.spriteSize.x = (float)value.getValue<int>();
-                            else if(key == "sprite_size_y")
-                                generatorData.spriteSize.y = (float)value.getValue<int>();
-                            else if(key == "velocity_x")
+                            else if (key == "sprite_size_x")
+                                generatorData.spriteSize.x = (float) value.getValue<int>();
+                            else if (key == "sprite_size_y")
+                                generatorData.spriteSize.y = (float) value.getValue<int>();
+                            else if (key == "velocity_x")
                                 generatorData.velocity.x = value.getValue<float>();
-                            else if(key == "velocity_y")
+                            else if (key == "velocity_y")
                                 generatorData.velocity.y = value.getValue<float>();
-                            else if(key == "is_kinematic")
+                            else if (key == "is_kinematic")
                                 generatorData.isKinematic = value.getValue<bool>();
-                            else if(key == "userdata_force_x")
+                            else if (key == "userdata_force_x")
                                 userDataForceX = value.getValue<float>();
-                            else if(key == "userdata_force_y")
+                            else if (key == "userdata_force_y")
                                 userDataForceY = value.getValue<float>();
-                            else if(key == "userdata_objecttype")
+                            else if (key == "userdata_objecttype")
                                 userdataObjectType = value.getValue<int>();
-                            else if(key == "userdata_command")
+                            else if (key == "userdata_command")
                                 userdataCommand = value.getValue<std::string>();
                         }
 
-                        ObjectType objectType = (ObjectType)userdataObjectType;
+                        ObjectType objectType = (ObjectType) userdataObjectType;
                         tson::Vector2i pos = generatorData.obj.getPosition();
                         tson::Vector2i size = generatorData.obj.getSize();
                         tson::Vector2i originalSize = generatorData.obj.getSize();
 
                         b2BodyType bodyType = (generatorData.isStatic) ? b2_staticBody : b2_dynamicBody;
 
-                        if(generatorData.isKinematic)
+                        if (generatorData.isKinematic)
                         {
                             bodyType = b2_kinematicBody;
                         }
 
                         PhysicsShape shape = PhysicsShape::None;
-                        if(obj.getObjectType() == tson::ObjectType::Rectangle) shape = PhysicsShape::Rectangle;
-                        else if(obj.getObjectType() == tson::ObjectType::Ellipse) shape = PhysicsShape::Circle;
+                        if (obj.getObjectType() == tson::ObjectType::Rectangle) shape = PhysicsShape::Rectangle;
+                        else if (obj.getObjectType() == tson::ObjectType::Ellipse) shape = PhysicsShape::Circle;
 
                         b2BodyDef bodyDef;
                         bodyDef.type = bodyType;
 
-                        b2Vec2 b2size = PhysicsObject::ConvertToB2Vec2({(float)size.x, (float)size.y});
-                        b2Vec2 b2origin = PhysicsObject::ConvertToB2Vec2({(float)size.x / 2, (float)size.y / 2});
-                        b2Vec2 b2pos = PhysicsObject::ConvertToB2Vec2({(float)pos.x, (float)pos.y});
+                        b2Vec2 b2size = PhysicsObject::ConvertToB2Vec2({(float) size.x, (float) size.y});
+                        b2Vec2 b2origin = PhysicsObject::ConvertToB2Vec2({(float) size.x / 2, (float) size.y / 2});
+                        b2Vec2 b2pos = PhysicsObject::ConvertToB2Vec2({(float) pos.x, (float) pos.y});
 
                         bodyDef.position.Set(b2pos.x + b2origin.x, b2pos.y + b2origin.y);
                         b2Body *body = m_world.CreateBody(&bodyDef);
-                        if(shape == PhysicsShape::Rectangle)
+                        if (shape == PhysicsShape::Rectangle)
                         {
                             b2PolygonShape box;
                             box.SetAsBox(b2size.x / 2 - b2_polygonRadius, b2size.y / 2 - b2_polygonRadius);
@@ -163,7 +163,7 @@ namespace ggj
                             body->CreateFixture(&fd);
 
                         }
-                        else if(shape == PhysicsShape::Circle)
+                        else if (shape == PhysicsShape::Circle)
                         {
                             b2CircleShape circle;
                             size = {size.x / 2, size.y / 2}; //Size is half, as it is radius
@@ -178,12 +178,12 @@ namespace ggj
                             body->CreateFixture(&fd);
                         }
 
-                        for (b2Fixture* f = body->GetFixtureList(); f; f = f->GetNext())
+                        for (b2Fixture *f = body->GetFixtureList(); f; f = f->GetNext())
                         {
                             f->SetSensor(generatorData.isTrigger);
                         }
 
-                        UserData userData {objectType, {userDataForceX, userDataForceY}, userdataCommand};
+                        UserData userData{objectType, {userDataForceX, userDataForceY}, userdataCommand};
                         generatorData.userData = userData;
 
                         generatorData.pos = pos;
@@ -204,29 +204,31 @@ namespace ggj
     void World::update(float timeDelta)
     {
 
-        m_world.Step(timeDelta, 8, 3); //8 and 3 are numbers suggested by Box2D documentation, higher numbers: more accuracy but costs more performance.
-        for(auto & layer : m_layers)
+        m_world.Step(timeDelta, 8,
+                     3); //8 and 3 are numbers suggested by Box2D documentation, higher numbers: more accuracy but costs more performance.
+        for (auto &layer: m_layers)
         {
             layer.second.update(timeDelta);
         }
-        if(m_player != nullptr)
+        if (m_player != nullptr)
         {
 
             m_camera.target = (m_player->cameraShouldFollowPlayer())
-                    ? raylib::Vector2((float)(int)(std::round(m_player->getPosition().x) - (float)400.f / 2), (float)(int)(std::round(m_player->getPosition().y) - (float)240.f / 2))
-                    : m_cameraDefault;
+                              ? raylib::Vector2((float) (int) (std::round(m_player->getPosition().x) - (float) 400.f / 2),
+                                                (float) (int) (std::round(m_player->getPosition().y) - (float) 240.f / 2))
+                              : m_cameraDefault;
 
             m_debugManager.setText(1, fmt::format("PlayerPos: ({0}, {1})", (int) m_player->getPosition().x, (int) m_player->getPosition().y));
             m_debugManager.setText(2, fmt::format("CameraPos: ({0}, {1})", (int) m_camera.target.x, (int) m_camera.target.y));
         }
 
-        if(m_camera.target.x > m_cameraMax.x)
+        if (m_camera.target.x > m_cameraMax.x)
             m_camera.target.x = m_cameraMax.x;
-        if(m_camera.target.x < m_cameraMin.x)
+        if (m_camera.target.x < m_cameraMin.x)
             m_camera.target.x = m_cameraMin.x;
-        if(m_camera.target.y > m_cameraMax.y)
+        if (m_camera.target.y > m_cameraMax.y)
             m_camera.target.y = m_cameraMax.y;
-        if(m_camera.target.y < m_cameraMin.y)
+        if (m_camera.target.y < m_cameraMin.y)
             m_camera.target.y = m_cameraMin.y;
     }
 
@@ -234,28 +236,105 @@ namespace ggj
     {
         m_window.ClearBackground(m_backgroundColor);
         m_camera.BeginMode();
-        for(auto & layer : m_layers)
+        for (auto &layer: m_layers)
         {
             layer.second.draw();
         }
         m_camera.EndMode();
     }
 
-    PhysicsObject *World::generatePhysicsObject(const std::string &name, b2Body *body, const ObjectGeneratorData &generatorData)
+    void World::generatePhysicsObject(const std::string &name, b2Body *body, const ObjectGeneratorData &generatorData)
+    {
+        if (name == "player1")
+            generatePlayer(name, body, generatorData);
+        else if (name == "bat")
+            generateBat(name, body, generatorData);
+        else
+            generateGenericPhysicsObject(name, body, generatorData);
+    }
+
+    void World::generatePlayer(const std::string &name, b2Body *body, const ObjectGeneratorData &generatorData)
+    {
+        TextureName id = m_mapper.getTextureNameByString(generatorData.sprite);
+        if (id != TextureName::None)
+        {
+            raylib::Texture *tex = m_textures.get(id);
+            if (tex != nullptr)
+            {
+                raylib::Rectangle rect = {0.f, 0.f, (float) generatorData.originalSize.x, (float) generatorData.originalSize.y};
+                raylib::Vector2 origin = {(float) rect.width / 2, (float) rect.height / 2};
+                raylib::Vector2 v = {(float) generatorData.pos.x + origin.x, (float) generatorData.pos.y + origin.y};
+
+                raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
+
+                if (generatorData.spriteSize.x != 0 && generatorData.spriteSize.y != 0)
+                {
+                    r.width = generatorData.spriteSize.x;
+                    r.height = generatorData.spriteSize.y;
+                }
+
+                raylib::Vector2 spriteSize = raylib::Vector2(r.width, r.height);
+
+                m_player = m_layers[generatorData.layerIndex].createGameObject<ggj::Player>(m_input, m_animationManager, m_mapper, body,
+                                                                                            raylib::Vector2((float) generatorData.size.x,
+                                                                                                            (float) generatorData.size.y),
+                                                                                            spriteSize, r,
+                                                                                            tex, generatorData.userData);
+                m_userDataManager.addUserData(body, m_player);
+            }
+        }
+    }
+
+    void World::generateBat(const std::string &name, b2Body *body, const ObjectGeneratorData &generatorData)
+    {
+        TextureName id = m_mapper.getTextureNameByString(generatorData.sprite);
+        if (id != TextureName::None)
+        {
+            raylib::Texture *tex = m_textures.get(id);
+            if (tex != nullptr)
+            {
+                raylib::Rectangle rect = {0.f, 0.f, (float) generatorData.originalSize.x, (float) generatorData.originalSize.y};
+                raylib::Vector2 origin = {(float) rect.width / 2, (float) rect.height / 2};
+                raylib::Vector2 v = {(float) generatorData.pos.x + origin.x, (float) generatorData.pos.y + origin.y};
+
+                raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
+
+                if (generatorData.spriteSize.x != 0 && generatorData.spriteSize.y != 0)
+                {
+                    r.width = generatorData.spriteSize.x;
+                    r.height = generatorData.spriteSize.y;
+                }
+
+                raylib::Vector2 spriteSize = raylib::Vector2(r.width, r.height);
+
+                PhysicsObject *physicsObject = m_layers[generatorData.layerIndex].createGameObject<ggj::Bat>(m_animationManager, m_mapper, body,
+                                                                                                             raylib::Vector2(
+                                                                                                                     (float) generatorData.size.x,
+                                                                                                                     (float) generatorData.size.y),
+                                                                                                             spriteSize, r,
+                                                                                                             tex, generatorData.userData,
+                                                                                                             generatorData.velocity);
+                m_userDataManager.addUserData(body, physicsObject);
+            }
+        }
+    }
+
+    void World::generateGenericPhysicsObject(const std::string &name, b2Body *body, const ObjectGeneratorData &generatorData)
     {
         bool isVisible = !generatorData.isStatic;
 
         PhysicsShape shape = PhysicsShape::None;
-        if(generatorData.obj.getObjectType() == tson::ObjectType::Rectangle) shape = PhysicsShape::Rectangle;
-        else if(generatorData.obj.getObjectType() == tson::ObjectType::Ellipse) shape = PhysicsShape::Circle;
+        if (generatorData.obj.getObjectType() == tson::ObjectType::Rectangle) shape = PhysicsShape::Rectangle;
+        else if (generatorData.obj.getObjectType() == tson::ObjectType::Ellipse) shape = PhysicsShape::Circle;
 
         raylib::Color color = generatorData.isStatic ? RED : DARKPURPLE;
-        if(generatorData.sprite.empty())
+        if (generatorData.sprite.empty())
         {
-            PhysicsObject* physicsObject = m_layers[generatorData.layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2((float) generatorData.size.x, (float) generatorData.size.y), shape,
-                                                                                                     generatorData.userData, color, isVisible);
+            PhysicsObject *physicsObject = m_layers[generatorData.layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2(
+                                                                                                                           (float) generatorData.size.x, (float) generatorData.size.y), shape,
+                                                                                                                   generatorData.userData, color,
+                                                                                                                   isVisible);
             m_userDataManager.addUserData(body, physicsObject);
-
         }
         else
         {
@@ -263,43 +342,30 @@ namespace ggj
             if (id != TextureName::None)
             {
                 raylib::Texture *tex = m_textures.get(id);
-                if(tex != nullptr)
+                if (tex != nullptr)
                 {
-                    raylib::Rectangle rect = {0.f, 0.f, (float)generatorData.originalSize.x, (float)generatorData.originalSize.y};
-                    raylib::Vector2 origin = {(float)rect.width / 2, (float)rect.height / 2};
-                    raylib::Vector2 v = {(float)generatorData.pos.x + origin.x, (float)generatorData.pos.y + origin.y};
-
+                    raylib::Rectangle rect = {0.f, 0.f, (float) generatorData.originalSize.x, (float) generatorData.originalSize.y};
+                    raylib::Vector2 origin = {(float) rect.width / 2, (float) rect.height / 2};
                     raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
 
-
-                    if(generatorData.spriteSize.x != 0 && generatorData.spriteSize.y != 0)
+                    if (generatorData.spriteSize.x != 0 && generatorData.spriteSize.y != 0)
                     {
                         r.width = generatorData.spriteSize.x;
                         r.height = generatorData.spriteSize.y;
                     }
 
-                    raylib::Vector2 offset = raylib::Vector2(r.width - rect.width, r.height - rect.height);
-
                     raylib::Vector2 spriteSize = raylib::Vector2(r.width, r.height);
 
-                    if(generatorData.isPlayer)
-                    {
-                        m_player = m_layers[generatorData.layerIndex].createGameObject<ggj::Player>(m_input, m_animationManager, m_mapper, body, raylib::Vector2((float) generatorData.size.x, (float) generatorData.size.y), spriteSize, r,
-                                                                                      tex, generatorData.userData);
-                        m_userDataManager.addUserData(body, m_player);
-                    }
-                    else
-                    {
-                        PhysicsObject* physicsObject = m_layers[generatorData.layerIndex].createGameObject<ggj::PhysicsSprite>(body,
-                                                                                                                 raylib::Vector2((float) generatorData.size.x, (float) generatorData.size.y),
-                                                                                                                 spriteSize, r,
-                                                                                                                 tex, generatorData.userData);
-                        m_userDataManager.addUserData(body, physicsObject);
-                    }
+                    PhysicsObject *physicsObject = m_layers[generatorData.layerIndex].createGameObject<ggj::PhysicsSprite>(body,
+                                                                                                                           raylib::Vector2(
+                                                                                                                                   (float) generatorData.size.x,
+                                                                                                                                   (float) generatorData.size.y),
+                                                                                                                           spriteSize, r,
+                                                                                                                           tex,
+                                                                                                                           generatorData.userData);
+                    m_userDataManager.addUserData(body, physicsObject);
                 }
             }
-
         }
-        return nullptr;
     }
 }

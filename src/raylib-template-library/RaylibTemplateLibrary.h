@@ -18,6 +18,9 @@
 //Game
 #include "game/Player.h"
 
+//Enemies
+#include "game/enemies/Bat.h"
+
 //Managers
 #include "managers/AnimationManager.h"
 #include "managers/CollisionManager.h"
