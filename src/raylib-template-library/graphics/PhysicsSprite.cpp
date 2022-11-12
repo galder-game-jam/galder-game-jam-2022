@@ -13,6 +13,6 @@ namespace ggj
 
         float width = (m_flip) ? -m_drawingRect.width : m_drawingRect.width;
         raylib::Rectangle rect = {m_drawingRect.x, m_drawingRect.y, width, m_drawingRect.height};
-        m_texture->Draw(rect, raylib::Rectangle(m_position.x + m_offset.x, m_position.y + m_offset.y,  m_drawingRect.width, m_drawingRect.height), m_origin, m_rotation, WHITE);
+        m_texture->Draw(rect, raylib::Rectangle(m_position.x, m_position.y,  m_drawingRect.width, m_drawingRect.height), m_origin, m_rotation, WHITE);
     }
 } // dev

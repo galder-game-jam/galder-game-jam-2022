@@ -26,7 +26,6 @@ namespace ggj
                     m_origin = raylib::Vector2(spriteSize.x / 2, spriteSize.y - physicsSize.y);
                 else
                     m_origin = raylib::Vector2(spriteSize.x / 2, spriteSize.y - physicsSize.y / 2);
-                m_offset = raylib::Vector2(0.f, 0.f);
             }
             void draw() override;
 
@@ -35,7 +34,6 @@ namespace ggj
             raylib::Rectangle m_drawingRect;
             bool m_flip {false};
             raylib::Vector2 m_spriteSize {0.f, 0.f};
-            raylib::Vector2 m_offset {0.f, 0.f};
     };
 
 } // dev
