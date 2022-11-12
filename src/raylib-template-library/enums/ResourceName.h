@@ -34,6 +34,8 @@ namespace ggj
         GraphicsPlayerSimple = 9,
         GraphicsMagicCliffsTileset = 10,
         GraphicsEnemyBat = 11,
+        GraphicsCrate = 12,
+        GraphicsNinjaSmiley = 13,
     };
 }
 

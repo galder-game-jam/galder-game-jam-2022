@@ -20,6 +20,8 @@ namespace ggj
         PlayerSimple = 8,
         MagicCliffsTileset = 9,
         Bat = 10,
+        Crate = 11,
+        NinjaSmiley = 12,
     };
 }
 #endif //GAME_DEV_TEMPLATE_TEXTURENAME_H

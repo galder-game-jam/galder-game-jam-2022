@@ -366,6 +366,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"crate.png"
                         }],
                  "rotation":0,
                  "visible":true,
@@ -383,6 +388,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"crate.png"
                         }],
                  "rotation":0,
                  "visible":true,
@@ -400,6 +410,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"crate.png"
                         }],
                  "rotation":0,
                  "visible":true,
@@ -417,6 +432,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"crate.png"
                         }],
                  "rotation":0,
                  "visible":true,
@@ -435,6 +455,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"ninja.png"
                         }],
                  "rotation":0,
                  "visible":true,
@@ -453,6 +478,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"ninja.png"
                         }],
                  "rotation":0,
                  "visible":true,
@@ -471,6 +501,11 @@
                          "name":"is_static",
                          "type":"bool",
                          "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"ninja.png"
                         }],
                  "rotation":0,
                  "visible":true,
