@@ -22,8 +22,11 @@ namespace ggj
             : PhysicsObject(body, physicsSize, (body->GetFixtureList()[0].GetShape()->GetType() == b2Shape::e_circle) ? PhysicsShape::Circle : PhysicsShape::Rectangle, isVisible),
               m_spriteSize{spriteSize}, m_drawingRect {drawingRect}, m_texture {texture}
             {
-                m_origin = raylib::Vector2(drawingRect.width / 2, drawingRect.height / 2);
-                m_offset = raylib::Vector2(spriteSize.x - .x, spriteSize.y - physicsSize.y);
+                if(m_shape == PhysicsShape::Circle)
+                    m_origin = raylib::Vector2(spriteSize.x / 2, spriteSize.y - physicsSize.y);
+                else
+                    m_origin = raylib::Vector2(spriteSize.x / 2, spriteSize.y - physicsSize.y / 2);
+                m_offset = raylib::Vector2(0.f, 0.f);
             }
             void draw() override;
 
