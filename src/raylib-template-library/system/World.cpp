@@ -80,6 +80,9 @@ namespace ggj
                         std::string sprite = c->get<std::string>("sprite");
                         int spriteSizeX = c->get<int>("sprite_size_x");
                         int spriteSizeY = c->get<int>("sprite_size_y");
+                        float userDataForceX = c->get<float>("userdata_force_x");
+                        float userDataForceY = c->get<float>("userdata_force_y");
+                        tson::EnumValue userdataObjectType = c->get<tson::EnumValue>("userdata_objecttype");
 
                         //RBP: Note to self: Improve Tileson so this was handled automatically in the TiledClass.
                         for(auto &[key, value] : obj.getProperties().getProperties())
@@ -96,8 +99,15 @@ namespace ggj
                                 spriteSizeX = value.getValue<int>();
                             else if(key == "sprite_size_y")
                                 spriteSizeY = value.getValue<int>();
+                            else if(key == "userdata_force_x")
+                                userDataForceX = value.getValue<float>();
+                            else if(key == "userdata_force_y")
+                                userDataForceY = value.getValue<float>();
+                            else if(key == "userdata_objecttype")
+                                userdataObjectType = value.getValue<tson::EnumValue>();
                         }
 
+                        ObjectType objectType = (ObjectType)userdataObjectType.getValue();
                         bool isVisible = !isStatic;
                         tson::Vector2i pos = obj.getPosition();
                         tson::Vector2i size = obj.getSize();
@@ -149,7 +159,7 @@ namespace ggj
                             f->SetSensor(isTrigger);
                         }
 
-                        UserData userData {};
+                        UserData userData {objectType, {userDataForceX, userDataForceY}};
                         m_userDataManager.addUserData(body, userData);
 
                         raylib::Color color = isStatic ? RED : DARKPURPLE;

@@ -40,6 +40,22 @@
                     "name": "sprite_size_y",
                     "type": "int",
                     "value": 0
+                },
+                {
+                    "name": "userdata_force_x",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "userdata_force_y",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "userdata_objecttype",
+                    "propertyType": "ObjectType",
+                    "type": "string",
+                    "value": "Undefined"
                 }
             ],
             "name": "PhysicsObject",
@@ -48,6 +64,20 @@
                 "property",
                 "object"
             ]
+        },
+        {
+            "id": 2,
+            "name": "ObjectType",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Undefined",
+                "Player",
+                "Enemy",
+                "Trap",
+                "PowerUp"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }
