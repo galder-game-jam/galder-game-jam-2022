@@ -8,6 +8,7 @@
 #include <string>
 #include "raylib-cpp.hpp"
 #include "UserData.hpp"
+#include "tileson.hpp"
 
 namespace ggj
 {
@@ -20,8 +21,14 @@ namespace ggj
         bool isKinematic{};
         std::string sprite{};
         raylib::Vector2 spriteSize{};
-        UserData userData {};
+        UserData userData{};
         raylib::Vector2 velocity{};
+
+        int layerIndex{};
+        tson::Object obj{};
+        tson::Vector2i pos{};
+        tson::Vector2i size{};
+        tson::Vector2i originalSize{};
     };
 
 } // ggj
