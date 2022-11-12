@@ -39,7 +39,7 @@ namespace ggj
 
             ggj::IInputManager<ggj::KeyboardKey> &m_inputManager;
             ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
-            Vector2 m_velocity {0.f, 0.f};
+            raylib::Vector2 m_velocity {0.f, 0.f};
             bool m_cameraShouldFollowPlayer {true};
             Animation m_animation;
             IMapper &m_mapper;

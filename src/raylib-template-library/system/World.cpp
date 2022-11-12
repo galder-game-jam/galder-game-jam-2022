@@ -74,46 +74,68 @@ namespace ggj
 
                     if(c->getMember("is_static") != nullptr && c->getMember("is_trigger") != nullptr)
                     {
-                        bool isStatic = c->get<bool>("is_static");
-                        bool isTrigger = c->get<bool>("is_trigger");
-                        bool isPlayer = c->get<bool>("is_player");
-                        std::string sprite = c->get<std::string>("sprite");
-                        int spriteSizeX = c->get<int>("sprite_size_x");
-                        int spriteSizeY = c->get<int>("sprite_size_y");
+                        ObjectGeneratorData generatorData {};
+
+                        std::string name = obj.getName();
+                        generatorData.isStatic = c->get<bool>("is_static");
+                        generatorData.isTrigger = c->get<bool>("is_trigger");
+                        generatorData.isKinematic = c->get<bool>("is_kinematic");
+                        generatorData.isPlayer = c->get<bool>("is_player");
+                        generatorData.sprite = c->get<std::string>("sprite");
+                        generatorData.spriteSize.x = (float)c->get<int>("sprite_size_x");
+                        generatorData.spriteSize.y = (float)c->get<int>("sprite_size_y");
+                        generatorData.velocity.x = c->get<float>("velocity_x");
+                        generatorData.velocity.y = c->get<float>("velocity_y");
+
                         float userDataForceX = c->get<float>("userdata_force_x");
                         float userDataForceY = c->get<float>("userdata_force_y");
                         int userdataObjectType = c->get<int>("userdata_objecttype");
+                        std::string userdataCommand = c->get<std::string>("userdata_command");
 
                         //RBP: Note to self: Improve Tileson so this was handled automatically in the TiledClass.
                         for(auto &[key, value] : obj.getProperties().getProperties())
                         {
                             if(key == "is_static")
-                                isStatic = value.getValue<bool>();
+                                generatorData.isStatic = value.getValue<bool>();
                             else if(key == "is_trigger")
-                                isTrigger = value.getValue<bool>();
+                                generatorData.isTrigger = value.getValue<bool>();
                             else if(key == "is_player")
-                                isPlayer = value.getValue<bool>();
+                                generatorData.isPlayer = value.getValue<bool>();
                             else if(key == "sprite")
-                                sprite = value.getValue<std::string>();
+                                generatorData.sprite = value.getValue<std::string>();
                             else if(key == "sprite_size_x")
-                                spriteSizeX = value.getValue<int>();
+                                generatorData.spriteSize.x = (float)value.getValue<int>();
                             else if(key == "sprite_size_y")
-                                spriteSizeY = value.getValue<int>();
+                                generatorData.spriteSize.y = (float)value.getValue<int>();
+                            else if(key == "velocity_x")
+                                generatorData.velocity.x = value.getValue<float>();
+                            else if(key == "velocity_y")
+                                generatorData.velocity.y = value.getValue<float>();
+                            else if(key == "is_kinematic")
+                                generatorData.isKinematic = value.getValue<bool>();
                             else if(key == "userdata_force_x")
                                 userDataForceX = value.getValue<float>();
                             else if(key == "userdata_force_y")
                                 userDataForceY = value.getValue<float>();
                             else if(key == "userdata_objecttype")
                                 userdataObjectType = value.getValue<int>();
+                            else if(key == "userdata_command")
+                                userdataCommand = value.getValue<std::string>();
                         }
 
                         ObjectType objectType = (ObjectType)userdataObjectType;
-                        bool isVisible = !isStatic;
+                        bool isVisible = !generatorData.isStatic;
                         tson::Vector2i pos = obj.getPosition();
                         tson::Vector2i size = obj.getSize();
                         tson::Vector2i originalSize = obj.getSize();
 
-                        b2BodyType bodyType = (isStatic) ? b2_staticBody : b2_dynamicBody;
+                        b2BodyType bodyType = (generatorData.isStatic) ? b2_staticBody : b2_dynamicBody;
+
+                        if(generatorData.isKinematic)
+                        {
+                            bodyType = b2_kinematicBody;
+                        }
+
                         PhysicsShape shape = PhysicsShape::None;
                         if(obj.getObjectType() == tson::ObjectType::Rectangle) shape = PhysicsShape::Rectangle;
                         else if(obj.getObjectType() == tson::ObjectType::Ellipse) shape = PhysicsShape::Circle;
@@ -156,13 +178,13 @@ namespace ggj
 
                         for (b2Fixture* f = body->GetFixtureList(); f; f = f->GetNext())
                         {
-                            f->SetSensor(isTrigger);
+                            f->SetSensor(generatorData.isTrigger);
                         }
 
-                        UserData userData {objectType, {userDataForceX, userDataForceY}};
+                        UserData userData {objectType, {userDataForceX, userDataForceY}, userdataCommand};
 
-                        raylib::Color color = isStatic ? RED : DARKPURPLE;
-                        if(sprite.empty())
+                        raylib::Color color = generatorData.isStatic ? RED : DARKPURPLE;
+                        if(generatorData.sprite.empty())
                         {
                             PhysicsObject* physicsObject = m_layers[layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2((float) size.x, (float) size.y), shape,
                                                                                       userData, color, isVisible);
@@ -171,7 +193,7 @@ namespace ggj
                         }
                         else
                         {
-                            TextureName id = m_mapper.getTextureNameByString(sprite);
+                            TextureName id = m_mapper.getTextureNameByString(generatorData.sprite);
                             if (id != TextureName::None)
                             {
                                 raylib::Texture *tex = m_textures.get(id);
@@ -184,17 +206,17 @@ namespace ggj
                                     raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
 
 
-                                    if(spriteSizeX != 0 && spriteSizeY != 0)
+                                    if(generatorData.spriteSize.x != 0 && generatorData.spriteSize.y != 0)
                                     {
-                                        r.width = (float)spriteSizeX;
-                                        r.height = (float)spriteSizeY;
+                                        r.width = generatorData.spriteSize.x;
+                                        r.height = generatorData.spriteSize.y;
                                     }
 
                                     raylib::Vector2 offset = raylib::Vector2(r.width - rect.width, r.height - rect.height);
 
                                     raylib::Vector2 spriteSize = raylib::Vector2(r.width, r.height);
 
-                                    if(isPlayer)
+                                    if(generatorData.isPlayer)
                                     {
                                         m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, m_animationManager, m_mapper, body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
                                                                                                   tex, userData);

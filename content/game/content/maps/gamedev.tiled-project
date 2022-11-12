@@ -12,6 +12,11 @@
             "id": 1,
             "members": [
                 {
+                    "name": "is_kinematic",
+                    "type": "bool",
+                    "value": false
+                },
+                {
                     "name": "is_player",
                     "type": "bool",
                     "value": false
@@ -42,6 +47,11 @@
                     "value": 0
                 },
                 {
+                    "name": "userdata_command",
+                    "type": "string",
+                    "value": ""
+                },
+                {
                     "name": "userdata_force_x",
                     "type": "float",
                     "value": 0
@@ -60,6 +70,16 @@
                     "name": "userdata_objecttype_enum",
                     "propertyType": "ObjectType",
                     "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "velocity_x",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "velocity_y",
+                    "type": "float",
                     "value": 0
                 }
             ],

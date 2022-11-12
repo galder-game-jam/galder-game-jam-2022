@@ -775,6 +775,97 @@
                  "width":16,
                  "x":432,
                  "y":768
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":71,
+                 "name":"bat",
+                 "properties":[
+                        {
+                         "name":"is_kinematic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":240,
+                 "y":1456
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":72,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":304,
+                 "y":1456
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":74,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":192,
+                 "y":1456
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -783,7 +874,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":71,
+ "nextobjectid":75,
  "orientation":"orthogonal",
  "properties":[
         {

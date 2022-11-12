@@ -16,6 +16,7 @@
 #include "../enums/KeyboardKey.h"
 #include "../graphics/PhysicsObject.h"
 #include "../RaylibTemplateLibrary.h"
+#include "ObjectGeneratorData.hpp"
 
 namespace ggj
 {

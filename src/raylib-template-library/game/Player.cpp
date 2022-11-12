@@ -34,30 +34,30 @@ namespace ggj
         //Should have a collection of commands or something assigned to the player for a best practice approach
         //But this is just meant to be a quick example
         b2Vec2 vel = m_body->GetLinearVelocity();
-        m_velocity = {vel.x, vel.y};
+        m_velocity = raylib::Vector2{vel.x, vel.y};
         if(m_inputManager.keyDown(KeyboardKey::A) && !m_inputManager.keyDown(KeyboardKey::D))
         {
             m_flip = true;
-            m_velocity = {m_velocity.x - (10.f * timeDelta), m_velocity.y};
+            m_velocity = raylib::Vector2{m_velocity.x - (10.f * timeDelta), m_velocity.y};
             if(m_velocity.y < 0.2f && m_velocity.y > -0.2f)
                 setPlayerState(PlayerState::Walk);
         }
         else if(m_inputManager.keyDown(KeyboardKey::D) && !m_inputManager.keyDown(KeyboardKey::A))
         {
             m_flip = false;
-            m_velocity = {m_velocity.x + (10.f * timeDelta), m_velocity.y};
+            m_velocity = raylib::Vector2{m_velocity.x + (10.f * timeDelta), m_velocity.y};
             if(m_velocity.y < 0.2f && m_velocity.y > -0.2f)
                 setPlayerState(PlayerState::Walk);
         }
         else
         {
-            m_velocity = {0.f, m_velocity.y};
+            m_velocity = raylib::Vector2{0.f, m_velocity.y};
         }
 
         //Jump
         if(m_inputManager.keyPressed(KeyboardKey::W))
         {
-            m_velocity = {m_velocity.x, m_velocity.y - 5.f};
+            m_velocity = raylib::Vector2{m_velocity.x, m_velocity.y - 5.f};
         }
 
         //Toggle player rotate. Fun!

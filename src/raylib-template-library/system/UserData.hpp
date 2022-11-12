@@ -15,7 +15,7 @@ namespace ggj
     {
         public:
             UserData() = default;
-            UserData(ObjectType objectType, const raylib::Vector2 &force): m_objectType{objectType}, m_force{force}
+            UserData(ObjectType objectType, const raylib::Vector2 &force, const std::string command): m_objectType{objectType}, m_force{force}, m_command {command}
             {
             }
 
@@ -24,6 +24,7 @@ namespace ggj
             ObjectType getObjectType() const { return m_objectType; }
             const raylib::Vector2 &getForce() const { return m_force; }
             bool shouldBeDestroyed() const { return m_shouldBeDestroyed; }
+            const std::string &getCommand() const { return m_command; }
 
         private:
             ObjectType m_objectType {ObjectType::Undefined};
