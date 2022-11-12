@@ -13,6 +13,7 @@
 //Enums
 #include "enums/AnimationName.h"
 #include "enums/KeyboardKey.h"
+#include "enums/PlayerState.h"
 
 //Game
 #include "game/Player.h"

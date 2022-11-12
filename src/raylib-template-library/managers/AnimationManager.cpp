@@ -14,30 +14,61 @@ namespace ggj
     bool AnimationManager::initialize()
     {
         m_animations[AnimationName::None] =
-                {
-                raylib::Vector2(32, 32),
-             {
-                        {raylib::Vector2(32 * 0,0), 500},
-                        {raylib::Vector2(32 * 1,0), 500},
-                        {raylib::Vector2(32 * 2,0), 500},
-                        {raylib::Vector2(32 * 3,0), 500},
-                        {raylib::Vector2(32 * 4,0), 500},
-                        {raylib::Vector2(32 * 5,0), 500},
-                        {raylib::Vector2(32 * 6,0), 500},
-                        {raylib::Vector2(32 * 7,0), 500},
-                        {raylib::Vector2(32 * 8,0), 500},
-                        {raylib::Vector2(32 * 9,0), 500},
-                        {raylib::Vector2(32 * 10,0), 500},
-                        {raylib::Vector2(32 * 11,0), 500},
-                        {raylib::Vector2(32 * 12,0), 500},
-                        {raylib::Vector2(32 * 13,0), 500},
-                        {raylib::Vector2(32 * 14,0), 500},
-                        {raylib::Vector2(32 * 15,0), 500},
-                        {raylib::Vector2(32 * 16,0), 500},
-                        {raylib::Vector2(32 * 17,0), 500},
-                        {raylib::Vector2(32 * 18,0), 500},
-                     }
-                };
+        {
+        raylib::Vector2(32, 32),
+     {
+                {raylib::Vector2(32 * 0,32), 100},
+                {raylib::Vector2(32 * 1,32), 100},
+                {raylib::Vector2(32 * 2,32), 100},
+                {raylib::Vector2(32 * 3,32), 100},
+                {raylib::Vector2(32 * 4,32), 100},
+                {raylib::Vector2(32 * 5,32), 100},
+                {raylib::Vector2(32 * 6,32), 100},
+                {raylib::Vector2(32 * 7,32), 100},
+                {raylib::Vector2(32 * 8,32), 100},
+                {raylib::Vector2(32 * 9,32), 100},
+                {raylib::Vector2(32 * 10,32), 100},
+                {raylib::Vector2(32 * 11,32), 100},
+                {raylib::Vector2(32 * 12,32), 100},
+                {raylib::Vector2(32 * 13,32), 100},
+                {raylib::Vector2(32 * 14,32), 100},
+                {raylib::Vector2(32 * 15,32), 100},
+                {raylib::Vector2(32 * 16,32), 100},
+                {raylib::Vector2(32 * 17,32), 100},
+                {raylib::Vector2(32 * 18,32), 100},
+             }
+        };
+        m_animations[AnimationName::PlayerIdle] =
+        {
+        raylib::Vector2(32, 32),
+    {
+                {raylib::Vector2(32 * 0,32), 100},
+            }
+        };
+        m_animations[AnimationName::PlayerWalk] =
+        {
+        raylib::Vector2(32, 32),
+    {
+                {raylib::Vector2(32 * 1,32), 100},
+                {raylib::Vector2(32 * 2,32), 100},
+                {raylib::Vector2(32 * 3,32), 100},
+                {raylib::Vector2(32 * 2,32), 100},
+            }
+        };
+        m_animations[AnimationName::PlayerJump] =
+        {
+        raylib::Vector2(32, 32),
+      {
+                {raylib::Vector2(32 * 5,32), 100},
+              }
+        };
+        m_animations[AnimationName::PlayerFall] =
+        {
+        raylib::Vector2(32, 32),
+     {
+                {raylib::Vector2(32 * 6,32), 100},
+             }
+        };
         return true;
     }
 } // ggj

@@ -39,18 +39,26 @@ namespace ggj
         {
             m_flip = true;
             m_velocity = {m_velocity.x - (10.f * timeDelta), m_velocity.y};
+            if(m_velocity.y < 0.2f && m_velocity.y > -0.2f)
+                setPlayerState(PlayerState::Walk);
         }
         else if(m_inputManager.keyDown(KeyboardKey::D) && !m_inputManager.keyDown(KeyboardKey::A))
         {
             m_flip = false;
             m_velocity = {m_velocity.x + (10.f * timeDelta), m_velocity.y};
+            if(m_velocity.y < 0.2f && m_velocity.y > -0.2f)
+                setPlayerState(PlayerState::Walk);
         }
         else
+        {
             m_velocity = {0.f, m_velocity.y};
+        }
 
         //Jump
         if(m_inputManager.keyPressed(KeyboardKey::W))
+        {
             m_velocity = {m_velocity.x, m_velocity.y - 5.f};
+        }
 
         //Toggle player rotate. Fun!
         if(m_inputManager.keyPressed(KeyboardKey::Space))
@@ -66,6 +74,18 @@ namespace ggj
         {
             m_cameraShouldFollowPlayer = !m_cameraShouldFollowPlayer;
         }
+        if(m_velocity.x == 0 && m_velocity.y == 0)
+        {
+            setPlayerState(PlayerState::Idle);
+        }
+        else if(m_velocity.y > 0.2f)
+        {
+            setPlayerState(PlayerState::Fall);
+        }
+        else if(m_velocity.y < -0.2f)
+        {
+            setPlayerState(PlayerState::Jump);
+        }
     }
 
     const Vector2 &Player::getVelocity() const
@@ -76,5 +96,14 @@ namespace ggj
     bool Player::cameraShouldFollowPlayer() const
     {
         return m_cameraShouldFollowPlayer;
+    }
+
+    void Player::setPlayerState(PlayerState playerState)
+    {
+        if (m_playerState == playerState)
+            return;
+
+        m_playerState = playerState;
+        m_animation = m_animationManager.getAnimation(m_mapper.getAnimationNameByPlayerState(playerState));
     }
 } // dev

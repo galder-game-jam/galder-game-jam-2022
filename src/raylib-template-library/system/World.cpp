@@ -179,7 +179,7 @@ namespace ggj
 
                                     if(isPlayer)
                                     {
-                                        m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, m_animationManager, body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
+                                        m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, m_animationManager, m_mapper, body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
                                                                                                   tex);
                                     }
                                     else

@@ -8,6 +8,9 @@
 #include "../graphics/PhysicsSprite.h"
 #include "../enums/KeyboardKey.h"
 #include "../managers/AnimationManager.h"
+#include "../enums/PlayerState.h"
+#include "../interfaces/system/IMapper.h"
+
 
 namespace ggj
 {
@@ -15,13 +18,13 @@ namespace ggj
     {
         public:
             Player() = default;
-            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager, b2Body *body, const raylib::Vector2 &physicsSize,
+            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager, IMapper &mapper, b2Body *body, const raylib::Vector2 &physicsSize,
                    const raylib::Vector2 &spriteSize,
                    const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
-            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, isVisible), m_inputManager {inputManager}, m_animationManager {animationManager}
+            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, isVisible), m_inputManager {inputManager}, m_animationManager {animationManager}, m_mapper{mapper}
             {
                 m_body->SetFixedRotation(true);
-                m_animation = m_animationManager.getAnimation(AnimationName::None);
+                m_animation = m_animationManager.getAnimation(AnimationName::PlayerIdle);
             }
 
             [[nodiscard]] const Vector2 &getVelocity() const;
@@ -32,12 +35,15 @@ namespace ggj
 
         private:
             void handleInputs(float timeDelta);
+            void setPlayerState(PlayerState playerState);
 
             ggj::IInputManager<ggj::KeyboardKey> &m_inputManager;
             ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
             Vector2 m_velocity {0.f, 0.f};
-            bool m_cameraShouldFollowPlayer {false};
+            bool m_cameraShouldFollowPlayer {true};
             Animation m_animation;
+            IMapper &m_mapper;
+            PlayerState m_playerState{PlayerState::Idle};
     };
 
 } // dev

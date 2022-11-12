@@ -7,6 +7,8 @@
 
 #include "../../enums/ResourceName.h"
 #include "../../enums/TextureName.h"
+#include "../../enums/AnimationName.h"
+#include "../../enums/PlayerState.h"
 
 namespace ggj
 {
@@ -19,8 +21,8 @@ namespace ggj
             virtual ~IMapper() = default;
 
             virtual TextureName getTextureNameByString(const std::string &id) = 0;
-
             virtual ResourceName getResourceNameByTextureName(TextureName id) = 0;
+            virtual AnimationName getAnimationNameByPlayerState(PlayerState playerState) = 0;
     };
 }
 

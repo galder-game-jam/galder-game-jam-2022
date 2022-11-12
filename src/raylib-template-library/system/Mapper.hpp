@@ -44,6 +44,23 @@ namespace ggj
                 return (m_texToRes.count(id) > 0) ? m_texToRes[id] : ResourceName::None;
             }
 
+            AnimationName getAnimationNameByPlayerState(PlayerState playerState)
+            {
+                switch (playerState)
+                {
+                    case PlayerState::Idle:
+                        return AnimationName::PlayerIdle;
+                    case PlayerState::Walk:
+                        return AnimationName::PlayerWalk;
+                    case PlayerState::Jump:
+                        return AnimationName::PlayerJump;
+                    case PlayerState::Fall:
+                        return AnimationName::PlayerFall;
+                    default:
+                        return AnimationName::None;
+                }
+            }
+
         private:
             std::map<TextureName, ResourceName> m_texToRes;
             std::map<std::string, TextureName> m_strToTex;
