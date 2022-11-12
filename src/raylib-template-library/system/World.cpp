@@ -82,7 +82,7 @@ namespace ggj
                         int spriteSizeY = c->get<int>("sprite_size_y");
                         float userDataForceX = c->get<float>("userdata_force_x");
                         float userDataForceY = c->get<float>("userdata_force_y");
-                        tson::EnumValue userdataObjectType = c->get<tson::EnumValue>("userdata_objecttype");
+                        tson::EnumValue userdataObjectType = c->getMember("userdata_objecttype")->getValue<tson::EnumValue>();
 
                         //RBP: Note to self: Improve Tileson so this was handled automatically in the TiledClass.
                         for(auto &[key, value] : obj.getProperties().getProperties())

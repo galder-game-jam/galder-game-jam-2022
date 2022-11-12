@@ -54,8 +54,8 @@
                 {
                     "name": "userdata_objecttype",
                     "propertyType": "ObjectType",
-                    "type": "string",
-                    "value": "Undefined"
+                    "type": "int",
+                    "value": 0
                 }
             ],
             "name": "PhysicsObject",
@@ -68,7 +68,7 @@
         {
             "id": 2,
             "name": "ObjectType",
-            "storageType": "string",
+            "storageType": "int",
             "type": "enum",
             "values": [
                 "Undefined",
