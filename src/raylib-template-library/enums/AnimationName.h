@@ -16,6 +16,7 @@ namespace ggj
         PlayerJump = 3,
         PlayerFall = 4,
         EnemyBatMove = 5,
+        EnemyBatDead = 6,
     };
 
 } // ggj

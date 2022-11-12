@@ -69,6 +69,23 @@ namespace ggj
                 {raylib::Vector2(32 * 6,32), 100},
              }
         };
+        m_animations[AnimationName::EnemyBatMove] =
+        {
+        raylib::Vector2(32, 32),
+     {
+                {raylib::Vector2(32 * 1,32), 100},
+                {raylib::Vector2(32 * 2,32), 100},
+                {raylib::Vector2(32 * 3,32), 100},
+                {raylib::Vector2(32 * 2,32), 100},
+             }
+        };
+        m_animations[AnimationName::EnemyBatDead] =
+        {
+        raylib::Vector2(32, 32),
+     {
+                {raylib::Vector2(32 * 0,32), 100},
+             }
+        };
         return true;
     }
 } // ggj

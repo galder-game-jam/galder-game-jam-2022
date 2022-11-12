@@ -21,4 +21,18 @@ namespace ggj
             m_velocity = -m_velocity;
         }
     }
+
+    void Bat::update(float timeDelta)
+    {
+        if(m_body == nullptr)
+            return;
+
+        PhysicsObject::update(timeDelta);
+
+        if(m_animation.isValid())
+        {
+            m_animation.update(timeDelta);
+            m_drawingRect = m_animation.getDrawingRect();
+        }
+    }
 } // ggj

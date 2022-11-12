@@ -27,6 +27,8 @@ namespace ggj
             }
             void move(const raylib::Vector2 &toMove) override;
 
+            void update(float timeDelta) override;
+
             void beginContact(PhysicsObject *a, PhysicsObject *b) override;
 
         private:
