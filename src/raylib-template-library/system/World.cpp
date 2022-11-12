@@ -149,6 +149,9 @@ namespace ggj
                             f->SetSensor(isTrigger);
                         }
 
+                        UserData userData {};
+                        m_userDataManager.addUserData(body, userData);
+
                         raylib::Color color = isStatic ? RED : DARKPURPLE;
                         if(sprite.empty())
                             m_layers[layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2((float)size.x, (float)size.y), shape, color, isVisible);

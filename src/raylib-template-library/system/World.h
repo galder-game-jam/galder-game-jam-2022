@@ -26,10 +26,10 @@ namespace ggj
                   ggj::ITextureManager<TextureName, raylib::Texture> &textures,
                   raylib::Window &window, ggj::IInputManager<ggj::KeyboardKey> &input, CollisionManager &collisionManager,
                   IDebugManager &debugManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager,
-                  std::unique_ptr<tson::Map> map)
+                  IUserDataManager<UserData> &userDataManager, std::unique_ptr<tson::Map> map)
                     : m_logger{logger}, m_resources{resources}, m_mapper{mapper}, m_textures{textures}, m_window{window},
                     m_input {input}, m_collisionManager {collisionManager}, m_debugManager {debugManager},
-                    m_animationManager {animationManager}, m_map{std::move(map)}
+                    m_animationManager {animationManager}, m_userDataManager{userDataManager}, m_map{std::move(map)}
             {
                 m_camera.target = (Vector2){ 0.f, 0.f };
                 m_camera.offset = {0.f, 0.f};//{8.f, 8.f};//(Vector2){ (float) window.GetWidth() / 2.0f, (float)window.GetHeight() / 2.0f };
@@ -51,6 +51,7 @@ namespace ggj
             ggj::CollisionManager &m_collisionManager;
             ggj::IDebugManager &m_debugManager;
             ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
+            IUserDataManager<UserData> &m_userDataManager;
             raylib::Camera2D m_camera;
 
             raylib::Vector2 m_cameraMin {0.f, 0.f};

@@ -27,6 +27,7 @@
 #include "managers/ResourceManager.hpp"
 #include "managers/InputManager.h"
 #include "managers/TextureManager.h"
+#include "managers/UserDataManager.hpp"
 #include "managers/WorldManager.h"
 
 //System

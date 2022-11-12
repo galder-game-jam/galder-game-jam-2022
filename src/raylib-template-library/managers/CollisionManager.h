@@ -6,6 +6,8 @@
 #define GAME_DEV_TEMPLATE_COLLISIONMANAGER_H
 
 #include "box2d/box2d.h"
+#include "../interfaces/manager/IUserDataManager.h"
+#include "../system/UserData.hpp"
 
 namespace ggj
 {
@@ -13,13 +15,18 @@ namespace ggj
     class CollisionManager : public b2ContactListener
     {
         public:
-            CollisionManager() = default;
+            explicit CollisionManager(IUserDataManager<UserData> &userDataManager) : m_userDataManager{userDataManager}
+            {
+            }
 
             //Overridden stuff from Box2D
             void BeginContact(b2Contact *contact) override;
             void EndContact(b2Contact *contact) override;
             void PreSolve(b2Contact *contact, const b2Manifold *oldManifold) override;
             void PostSolve(b2Contact *contact, const b2ContactImpulse *impulse) override;
+
+        private:
+            IUserDataManager<UserData> &m_userDataManager;
     };
 
 } // dev

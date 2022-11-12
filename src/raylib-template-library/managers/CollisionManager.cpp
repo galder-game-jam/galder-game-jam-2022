@@ -18,7 +18,6 @@ namespace ggj
 
     void CollisionManager::PreSolve(b2Contact *contact, const b2Manifold *oldManifold)
     {
-
     }
 
     void CollisionManager::PostSolve(b2Contact *contact, const b2ContactImpulse *impulse)

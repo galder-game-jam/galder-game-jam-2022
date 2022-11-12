@@ -13,6 +13,7 @@
 #include "../enums/KeyboardKey.h"
 #include <map>
 #include "CollisionManager.h"
+#include "UserDataManager.hpp"
 
 namespace ggj
 {
@@ -22,10 +23,11 @@ namespace ggj
             WorldManager(ggj::ILogger &logger, ggj::IResourceManager<ResourceName> &resources, IMapper &mapper,
                          ggj::ITextureManager<TextureName, raylib::Texture> &textures, raylib::Window &window,
                          ggj::IInputManager<ggj::KeyboardKey> &input, ggj::CollisionManager & collisionManager,
-                         ggj::IDebugManager &debugManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager)
+                         ggj::IDebugManager &debugManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager,
+                         IUserDataManager<UserData> &userDataManager)
                     : m_logger{logger}, m_resources{resources}, m_mapper{mapper}, m_textures{textures},
                       m_window{window}, m_input{input}, m_collisionManager {collisionManager},
-                      m_debugManager {debugManager}, m_animationManager {animationManager}
+                      m_debugManager {debugManager}, m_animationManager {animationManager}, m_userDataManager{userDataManager}
             {
 
             }
@@ -48,6 +50,7 @@ namespace ggj
             ggj::CollisionManager &m_collisionManager;
             ggj::IDebugManager &m_debugManager;
             ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
+            IUserDataManager<UserData> &m_userDataManager;
 
             std::unique_ptr<tson::Project> m_project{nullptr};
 
