@@ -19,6 +19,7 @@ namespace ggj
         Andre = 7,
         PlayerSimple = 8,
         MagicCliffsTileset = 9,
+        Bat = 10,
     };
 }
 #endif //GAME_DEV_TEMPLATE_TEXTURENAME_H

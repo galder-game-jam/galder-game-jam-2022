@@ -29,6 +29,7 @@ namespace ggj
             ObjectType m_objectType {ObjectType::Undefined};
             raylib::Vector2 m_force {0.f, 0.f};
             bool m_shouldBeDestroyed{false};
+            std::string m_command{};
     };
 
 } // ggj

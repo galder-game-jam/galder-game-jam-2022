@@ -20,8 +20,8 @@ namespace ggj
             Player() = default;
             Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager, IMapper &mapper, b2Body *body, const raylib::Vector2 &physicsSize,
                    const raylib::Vector2 &spriteSize,
-                   const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
-            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, isVisible), m_inputManager {inputManager}, m_animationManager {animationManager}, m_mapper{mapper}
+                   const raylib::Rectangle &drawingRect, raylib::Texture * texture, const UserData &userData, bool isVisible = true)
+            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, userData, isVisible), m_inputManager {inputManager}, m_animationManager {animationManager}, m_mapper{mapper}
             {
                 m_body->SetFixedRotation(true);
                 m_animation = m_animationManager.getAnimation(AnimationName::PlayerIdle);

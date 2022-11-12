@@ -16,8 +16,8 @@ namespace ggj
 
         public:
             virtual ~IUserDataManager() noexcept = default;
-            virtual T* getUserData(b2Body *body) = 0;
-            virtual void addUserData(b2Body *body, const T &userData) = 0;
+            virtual T getUserData(b2Body *body) = 0;
+            virtual void addUserData(b2Body *body, T userData) = 0;
     };
 
 } // ggj

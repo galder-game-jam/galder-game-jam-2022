@@ -8,6 +8,7 @@
 #include "box2d/box2d.h"
 #include "../interfaces/manager/IUserDataManager.h"
 #include "../system/UserData.hpp"
+#include "../graphics/PhysicsObject.h"
 
 namespace ggj
 {
@@ -15,7 +16,7 @@ namespace ggj
     class CollisionManager : public b2ContactListener
     {
         public:
-            explicit CollisionManager(IUserDataManager<UserData> &userDataManager) : m_userDataManager{userDataManager}
+            explicit CollisionManager(IUserDataManager<PhysicsObject*> &userDataManager) : m_userDataManager{userDataManager}
             {
             }
 
@@ -26,7 +27,7 @@ namespace ggj
             void PostSolve(b2Contact *contact, const b2ContactImpulse *impulse) override;
 
         private:
-            IUserDataManager<UserData> &m_userDataManager;
+            IUserDataManager<PhysicsObject*> &m_userDataManager;
     };
 
 } // dev

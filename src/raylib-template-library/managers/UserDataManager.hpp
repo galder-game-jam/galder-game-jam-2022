@@ -11,21 +11,21 @@
 
 namespace ggj
 {
-    class UserDataManager : public IUserDataManager<UserData>
+    class UserDataManager : public IUserDataManager<PhysicsObject*>
     {
         public:
-            UserData *getUserData(b2Body *body) override
+            PhysicsObject *getUserData(b2Body *body) override
             {
-                return (m_userData.count(body) > 0) ? &m_userData[body] : nullptr;
+                return (m_userData.count(body) > 0) ? m_userData[body] : nullptr;
             }
 
-            void addUserData(b2Body *body, const UserData &userData) override
+            void addUserData(b2Body *body, PhysicsObject *userData) override
             {
                 m_userData[body] = userData;
             }
 
         private:
-            std::map<b2Body*, UserData> m_userData;
+            std::map<b2Body*, PhysicsObject*> m_userData;
     };
 }
 

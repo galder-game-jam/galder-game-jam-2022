@@ -53,6 +53,11 @@
                 },
                 {
                     "name": "userdata_objecttype",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "userdata_objecttype_enum",
                     "propertyType": "ObjectType",
                     "type": "int",
                     "value": 0

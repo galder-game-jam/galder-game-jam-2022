@@ -62,4 +62,9 @@ namespace ggj
     {
         return radians * (180.0/PI);
     }
+
+    UserData* PhysicsObject::getUserData()
+    {
+        return &m_userData;
+    }
 } // dev

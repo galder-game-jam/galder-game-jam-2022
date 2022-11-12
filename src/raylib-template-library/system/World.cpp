@@ -82,7 +82,7 @@ namespace ggj
                         int spriteSizeY = c->get<int>("sprite_size_y");
                         float userDataForceX = c->get<float>("userdata_force_x");
                         float userDataForceY = c->get<float>("userdata_force_y");
-                        tson::EnumValue userdataObjectType = c->getMember("userdata_objecttype")->getValue<tson::EnumValue>();
+                        int userdataObjectType = c->get<int>("userdata_objecttype");
 
                         //RBP: Note to self: Improve Tileson so this was handled automatically in the TiledClass.
                         for(auto &[key, value] : obj.getProperties().getProperties())
@@ -104,10 +104,10 @@ namespace ggj
                             else if(key == "userdata_force_y")
                                 userDataForceY = value.getValue<float>();
                             else if(key == "userdata_objecttype")
-                                userdataObjectType = value.getValue<tson::EnumValue>();
+                                userdataObjectType = value.getValue<int>();
                         }
 
-                        ObjectType objectType = (ObjectType)userdataObjectType.getValue();
+                        ObjectType objectType = (ObjectType)userdataObjectType;
                         bool isVisible = !isStatic;
                         tson::Vector2i pos = obj.getPosition();
                         tson::Vector2i size = obj.getSize();
@@ -160,11 +160,15 @@ namespace ggj
                         }
 
                         UserData userData {objectType, {userDataForceX, userDataForceY}};
-                        m_userDataManager.addUserData(body, userData);
 
                         raylib::Color color = isStatic ? RED : DARKPURPLE;
                         if(sprite.empty())
-                            m_layers[layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2((float)size.x, (float)size.y), shape, color, isVisible);
+                        {
+                            PhysicsObject* physicsObject = m_layers[layerIndex].createGameObject<ggj::PhysicsObject>(body, raylib::Vector2((float) size.x, (float) size.y), shape,
+                                                                                      userData, color, isVisible);
+                            m_userDataManager.addUserData(body, physicsObject);
+
+                        }
                         else
                         {
                             TextureName id = m_mapper.getTextureNameByString(sprite);
@@ -193,11 +197,17 @@ namespace ggj
                                     if(isPlayer)
                                     {
                                         m_player = m_layers[layerIndex].createGameObject<ggj::Player>(m_input, m_animationManager, m_mapper, body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
-                                                                                                  tex);
+                                                                                                  tex, userData);
+                                        m_userDataManager.addUserData(body, m_player);
                                     }
                                     else
-                                        m_layers[layerIndex].createGameObject<ggj::PhysicsSprite>(body, raylib::Vector2((float) size.x, (float) size.y), spriteSize, r,
-                                                                                              tex);
+                                    {
+                                        PhysicsObject* physicsObject = m_layers[layerIndex].createGameObject<ggj::PhysicsSprite>(body,
+                                                                                                  raylib::Vector2((float) size.x, (float) size.y),
+                                                                                                  spriteSize, r,
+                                                                                                  tex, userData);
+                                        m_userDataManager.addUserData(body, physicsObject);
+                                    }
                                 }
                             }
 

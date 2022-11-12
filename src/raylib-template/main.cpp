@@ -14,7 +14,7 @@ auto buildInjector(ggj::ILogger &logger, raylib::Window &window)
             boost::di::bind<ggj::IInputManager<ggj::KeyboardKey>>().to<ggj::InputManager>(),
             boost::di::bind<ggj::IResourceManager<ggj::ResourceName>>().to<ggj::ResourceManager<ggj::ResourceName>>(),
             boost::di::bind<ggj::IAnimationManager<ggj::Animation, ggj::AnimationName>>().to<ggj::AnimationManager>(),
-            boost::di::bind<ggj::IUserDataManager<ggj::UserData>>().to<ggj::UserDataManager>(),
+            boost::di::bind<ggj::IUserDataManager<ggj::PhysicsObject*>>().to<ggj::UserDataManager>(),
 
             boost::di::bind<ggj::IExecutableInfo>().to<ggj::ExecutableInfo>(),
             #ifdef GAME_DEV_DEBUG

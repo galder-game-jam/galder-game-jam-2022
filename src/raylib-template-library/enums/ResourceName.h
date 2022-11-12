@@ -33,6 +33,7 @@ namespace ggj
         GraphicsAndre = 8,
         GraphicsPlayerSimple = 9,
         GraphicsMagicCliffsTileset = 10,
+        GraphicsEnemyBat = 11,
     };
 }
 
