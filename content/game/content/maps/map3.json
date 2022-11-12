@@ -848,6 +848,11 @@
                          "value":32
                         }, 
                         {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
                          "name":"velocity_x",
                          "type":"float",
                          "value":2
@@ -893,6 +898,11 @@
                          "name":"sprite_size_y",
                          "type":"int",
                          "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
                         }, 
                         {
                          "name":"velocity_x",
@@ -945,6 +955,11 @@
                          "name":"sprite_size_y",
                          "type":"int",
                          "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
                         }, 
                         {
                          "name":"velocity_x",

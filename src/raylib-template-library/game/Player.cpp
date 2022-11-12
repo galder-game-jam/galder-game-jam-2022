@@ -106,4 +106,13 @@ namespace ggj
         m_playerState = playerState;
         m_animation = m_animationManager.getAnimation(m_mapper.getAnimationNameByPlayerState(playerState));
     }
+
+    void Player::beginContact(PhysicsObject *a, PhysicsObject *b)
+    {
+        if(b->getUserData()->getObjectType() == ObjectType::Enemy)
+        {
+            m_body->SetTransform(ConvertToB2Vec2(m_startPos), 0);
+        }
+        PhysicsObject::beginContact(a, b);
+    }
 } // dev

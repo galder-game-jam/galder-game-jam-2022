@@ -25,10 +25,13 @@ namespace ggj
             {
                 m_body->SetFixedRotation(true);
                 m_animation = m_animationManager.getAnimation(AnimationName::PlayerIdle);
+                m_startPos = ConvertToVector2(m_body->GetPosition());
             }
 
             [[nodiscard]] const Vector2 &getVelocity() const;
             [[nodiscard]] bool cameraShouldFollowPlayer() const;
+
+            void beginContact(PhysicsObject *a, PhysicsObject *b) override;
 
             void update(float timeDelta) override;
             void draw() override;
@@ -44,6 +47,7 @@ namespace ggj
             Animation m_animation;
             IMapper &m_mapper;
             PlayerState m_playerState{PlayerState::Idle};
+            raylib::Vector2 m_startPos{};
     };
 
 } // dev
