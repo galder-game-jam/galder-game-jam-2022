@@ -11,12 +11,14 @@
 #include "interfaces/system/IMapper.h"
 
 //Enums
+#include "enums/AnimationName.h"
 #include "enums/KeyboardKey.h"
 
 //Game
 #include "game/Player.h"
 
 //Managers
+#include "managers/AnimationManager.h"
 #include "managers/CollisionManager.h"
 #include "managers/DummyDebugManager.hpp"
 #include "managers/DebugManager.h"

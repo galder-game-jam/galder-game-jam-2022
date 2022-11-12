@@ -7,6 +7,7 @@
 
 #include "../graphics/PhysicsSprite.h"
 #include "../enums/KeyboardKey.h"
+#include "../managers/AnimationManager.h"
 
 namespace ggj
 {
@@ -14,12 +15,13 @@ namespace ggj
     {
         public:
             Player() = default;
-            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, b2Body *body, const raylib::Vector2 &physicsSize,
+            Player(ggj::IInputManager<ggj::KeyboardKey> &inputManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager, b2Body *body, const raylib::Vector2 &physicsSize,
                    const raylib::Vector2 &spriteSize,
                    const raylib::Rectangle &drawingRect, raylib::Texture * texture, bool isVisible = true)
-            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, isVisible), m_inputManager {inputManager}
+            : PhysicsSprite(body, physicsSize, spriteSize, drawingRect, texture, isVisible), m_inputManager {inputManager}, m_animationManager {animationManager}
             {
                 m_body->SetFixedRotation(true);
+                m_animation = m_animationManager.getAnimation(AnimationName::None);
             }
 
             [[nodiscard]] const Vector2 &getVelocity() const;
@@ -32,8 +34,10 @@ namespace ggj
             void handleInputs(float timeDelta);
 
             ggj::IInputManager<ggj::KeyboardKey> &m_inputManager;
+            ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
             Vector2 m_velocity {0.f, 0.f};
             bool m_cameraShouldFollowPlayer {false};
+            Animation m_animation;
     };
 
 } // dev

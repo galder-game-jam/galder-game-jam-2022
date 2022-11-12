@@ -20,6 +20,13 @@ namespace ggj
 
         handleInputs(timeDelta);
         m_body->SetLinearVelocity({m_velocity.x, m_velocity.y});
+
+
+        if(m_animation.isValid())
+        {
+            m_animation.update(timeDelta);
+            m_drawingRect = m_animation.getDrawingRect();
+        }
     }
 
     void Player::handleInputs(float timeDelta)

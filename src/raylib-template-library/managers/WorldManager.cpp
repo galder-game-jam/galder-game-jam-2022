@@ -45,7 +45,7 @@ namespace ggj
 
                     if (map->getStatus() == tson::ParseStatus::OK)
                     {
-                        m_worlds[stage] = std::make_unique<World>(m_logger, m_resources, m_mapper, m_textures, m_window, m_input, m_collisionManager, m_debugManager, std::move(map));
+                        m_worlds[stage] = std::make_unique<World>(m_logger, m_resources, m_mapper, m_textures, m_window, m_input, m_collisionManager, m_debugManager, m_animationManager, std::move(map));
                         m_worlds[stage]->initialize();
                         m_logger.debug(fmt::format("World added: {0}", file.filename().c_str()));
                     }

@@ -21,9 +21,11 @@ namespace ggj
         public:
             WorldManager(ggj::ILogger &logger, ggj::IResourceManager<ResourceName> &resources, IMapper &mapper,
                          ggj::ITextureManager<TextureName, raylib::Texture> &textures, raylib::Window &window,
-                         ggj::IInputManager<ggj::KeyboardKey> &input, ggj::CollisionManager & collisionManager, ggj::IDebugManager &debugManager)
+                         ggj::IInputManager<ggj::KeyboardKey> &input, ggj::CollisionManager & collisionManager,
+                         ggj::IDebugManager &debugManager, ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animationManager)
                     : m_logger{logger}, m_resources{resources}, m_mapper{mapper}, m_textures{textures},
-                      m_window{window}, m_input{input}, m_collisionManager {collisionManager}, m_debugManager {debugManager}
+                      m_window{window}, m_input{input}, m_collisionManager {collisionManager},
+                      m_debugManager {debugManager}, m_animationManager {animationManager}
             {
 
             }
@@ -45,6 +47,7 @@ namespace ggj
             ggj::IInputManager<ggj::KeyboardKey> &m_input;
             ggj::CollisionManager &m_collisionManager;
             ggj::IDebugManager &m_debugManager;
+            ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
 
             std::unique_ptr<tson::Project> m_project{nullptr};
 

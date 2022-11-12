@@ -13,6 +13,7 @@ auto buildInjector(ggj::ILogger &logger, raylib::Window &window)
             boost::di::bind<ggj::IMapper>().to<ggj::Mapper>(),
             boost::di::bind<ggj::IInputManager<ggj::KeyboardKey>>().to<ggj::InputManager>(),
             boost::di::bind<ggj::IResourceManager<ggj::ResourceName>>().to<ggj::ResourceManager<ggj::ResourceName>>(),
+            boost::di::bind<ggj::IAnimationManager<ggj::Animation, ggj::AnimationName>>().to<ggj::AnimationManager>(),
             boost::di::bind<ggj::IExecutableInfo>().to<ggj::ExecutableInfo>(),
             #ifdef GAME_DEV_DEBUG
             boost::di::bind<ggj::IDebugManager>().to<ggj::DebugManager>(),
@@ -33,11 +34,13 @@ struct App
     ggj::IExecutableInfo &executableInfo;
     ggj::IGameManager &game;
     ggj::IResourceManager<ggj::ResourceName> &resources;
+    ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &animations;
     raylib::Window &window;
 
     bool initialize()
     {
         resources.initialize();
+        animations.initialize();
 
         if(!game.initialize())
             return false;
