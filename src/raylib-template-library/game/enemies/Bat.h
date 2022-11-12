@@ -24,6 +24,10 @@ namespace ggj
             {
                 m_body->SetFixedRotation(true);
                 m_animation = m_animationManager.getAnimation(AnimationName::EnemyBatMove);
+                m_body->SetLinearVelocity({m_velocity.x, m_velocity.y});
+//                m_body->SetGravityScale(0);
+//                m_massData = {0.f, {0.f,0.f}, 0.f};
+//                m_body->SetMassData(&m_massData);
             }
             void move(const raylib::Vector2 &toMove) override;
 
@@ -32,10 +36,16 @@ namespace ggj
             void beginContact(PhysicsObject *a, PhysicsObject *b) override;
 
         private:
+            void turn();
+
+            float m_turnTimer{0.f};
+            float m_turnTriggerValue{3.f};
             ggj::IAnimationManager<ggj::Animation, ggj::AnimationName> &m_animationManager;
             IMapper &m_mapper;
             Animation m_animation;
             raylib::Vector2 m_velocity {0.f, 0.f};
+//            b2MassData m_massData{};
+
     };
 
 } // ggj

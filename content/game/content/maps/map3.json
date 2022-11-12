@@ -820,52 +820,112 @@
                  "rotation":0,
                  "visible":true,
                  "width":16,
-                 "x":240,
-                 "y":1456
+                 "x":160,
+                 "y":1392
                 }, 
                 {
                  "class":"PhysicsObject",
                  "height":16,
-                 "id":72,
-                 "name":"enemyTurn",
+                 "id":75,
+                 "name":"bat",
                  "properties":[
                         {
-                         "name":"is_trigger",
+                         "name":"is_kinematic",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"userdata_command",
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
                          "type":"string",
-                         "value":"enemy_turn"
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":3
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":16,
-                 "x":304,
-                 "y":1456
+                 "x":256,
+                 "y":1135.5
                 }, 
                 {
                  "class":"PhysicsObject",
                  "height":16,
-                 "id":74,
-                 "name":"enemyTurn",
+                 "id":76,
+                 "name":"bat",
                  "properties":[
                         {
-                         "name":"is_trigger",
+                         "name":"is_kinematic",
                          "type":"bool",
                          "value":true
                         }, 
                         {
-                         "name":"userdata_command",
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
                          "type":"string",
-                         "value":"enemy_turn"
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":-3
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":16,
-                 "x":192,
-                 "y":1456
+                 "x":111.333333333333,
+                 "y":925.333333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -874,7 +934,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":75,
+ "nextobjectid":77,
  "orientation":"orthogonal",
  "properties":[
         {
