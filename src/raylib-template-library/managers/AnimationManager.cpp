@@ -86,6 +86,17 @@ namespace ggj
                 {raylib::Vector2(32 * 0,32), 100},
              }
         };
+
+        m_animations[AnimationName::EnemySnakeMove] =
+                {
+                        raylib::Vector2(32, 32),
+                        {
+                                {raylib::Vector2(32 * 0,32 * 3), 100},
+                                {raylib::Vector2(32 * 1,32 * 3), 100},
+                                {raylib::Vector2(32 * 2,32 * 3), 100},
+                                {raylib::Vector2(32 * 3,32 * 3), 100},
+                        }
+                };
         return true;
     }
 } // ggj

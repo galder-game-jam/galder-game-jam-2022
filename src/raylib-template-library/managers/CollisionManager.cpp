@@ -20,8 +20,10 @@ namespace ggj
             b->beginContact(b, a, contact);
             UserData* userDataA = a->getUserData();
             UserData* userDataB = b->getUserData();
-            bodyA->SetLinearVelocity({userDataB->getForce().x, userDataB->getForce().y});
-            bodyB->SetLinearVelocity({userDataA->getForce().x, userDataA->getForce().y});
+            bodyA->ApplyLinearImpulseToCenter({userDataB->getForce().x, userDataB->getForce().y}, true);
+            bodyB->ApplyLinearImpulseToCenter({userDataA->getForce().x, userDataA->getForce().y}, true);
+            //bodyA->SetLinearVelocity({userDataB->getForce().x, userDataB->getForce().y});
+            //bodyB->SetLinearVelocity({userDataA->getForce().x, userDataA->getForce().y});
         }
     }
 

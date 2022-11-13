@@ -249,6 +249,8 @@ namespace ggj
             generatePlayer(name, body, generatorData);
         else if (name == "bat")
             generateBat(name, body, generatorData);
+        else if (name == "snake")
+            generateSnake(name, body, generatorData);
         else
             generateGenericPhysicsObject(name, body, generatorData);
     }
@@ -365,6 +367,40 @@ namespace ggj
                                                                                                                            generatorData.userData);
                     m_userDataManager.addUserData(body, physicsObject);
                 }
+            }
+        }
+    }
+
+    void World::generateSnake(const std::string &name, b2Body *body, const ObjectGeneratorData &generatorData)
+    {
+        TextureName id = m_mapper.getTextureNameByString(generatorData.sprite);
+        if (id != TextureName::None)
+        {
+            raylib::Texture *tex = m_textures.get(id);
+            if (tex != nullptr)
+            {
+                raylib::Rectangle rect = {0.f, 0.f, (float) generatorData.originalSize.x, (float) generatorData.originalSize.y};
+                raylib::Vector2 origin = {(float) rect.width / 2, (float) rect.height / 2};
+                raylib::Vector2 v = {(float) generatorData.pos.x + origin.x, (float) generatorData.pos.y + origin.y};
+
+                raylib::Rectangle r = {(float) rect.x, (float) rect.y, (float) rect.width, (float) rect.height};
+
+                if (generatorData.spriteSize.x != 0 && generatorData.spriteSize.y != 0)
+                {
+                    r.width = generatorData.spriteSize.x;
+                    r.height = generatorData.spriteSize.y;
+                }
+
+                raylib::Vector2 spriteSize = raylib::Vector2(r.width, r.height);
+
+                PhysicsObject *physicsObject = m_layers[generatorData.layerIndex].createGameObject<ggj::Snake>(m_animationManager, m_mapper, body,
+                                                                                                             raylib::Vector2(
+                                                                                                                     (float) generatorData.size.x,
+                                                                                                                     (float) generatorData.size.y),
+                                                                                                             spriteSize, r,
+                                                                                                             tex, generatorData.userData,
+                                                                                                             generatorData.velocity);
+                m_userDataManager.addUserData(body, physicsObject);
             }
         }
     }

@@ -20,6 +20,7 @@
 
 //Enemies
 #include "game/enemies/Bat.h"
+#include "game/enemies/Snake.h"
 
 //Managers
 #include "managers/AnimationManager.h"

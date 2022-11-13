@@ -41,9 +41,12 @@ namespace ggj
             bool initialize() override;
             void update(float timeDelta) override;
             void draw() override;
+
+            //Generator logic
             void generatePhysicsObject(const std::string &name, b2Body* body, const ObjectGeneratorData &generatorData);
             void generatePlayer(const std::string &name, b2Body* body, const ObjectGeneratorData &generatorData);
             void generateBat(const std::string &name, b2Body* body, const ObjectGeneratorData &generatorData);
+            void generateSnake(const std::string &name, b2Body* body, const ObjectGeneratorData &generatorData);
             void generateGenericPhysicsObject(const std::string &name, b2Body* body, const ObjectGeneratorData &generatorData);
 
         private:

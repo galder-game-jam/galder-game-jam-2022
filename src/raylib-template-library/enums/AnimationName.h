@@ -17,6 +17,7 @@ namespace ggj
         PlayerFall = 4,
         EnemyBatMove = 5,
         EnemyBatDead = 6,
+        EnemySnakeMove = 7,
     };
 
 } // ggj

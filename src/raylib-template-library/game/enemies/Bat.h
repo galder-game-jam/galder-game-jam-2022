@@ -25,6 +25,7 @@ namespace ggj
                 m_body->SetFixedRotation(true);
                 m_animation = m_animationManager.getAnimation(AnimationName::EnemyBatMove);
                 m_body->SetLinearVelocity({m_velocity.x, m_velocity.y});
+                m_flip = m_velocity.x < 0.f;
 //                m_body->SetGravityScale(0);
 //                m_massData = {0.f, {0.f,0.f}, 0.f};
 //                m_body->SetMassData(&m_massData);
