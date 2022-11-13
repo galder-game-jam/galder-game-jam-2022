@@ -45,9 +45,9 @@ void ggj::GameManager::render()
     float scale = std::min((float)m_window.GetWidth()/m_originalWindowSize.x, (float)m_window.GetHeight()/m_originalWindowSize.y);
     BeginDrawing();
     m_window.ClearBackground(BLACK);
-    DrawTexturePro(m_renderTexture.texture, (Rectangle){ 0.0f, 0.0f, (float)m_renderTexture.texture.width, (float)-m_renderTexture.texture.height },
-                   (Rectangle){ ((float)m_window.GetWidth() - ((float)m_originalWindowSize.x*scale))*0.5f, ((float)m_window.GetHeight() - ((float)m_originalWindowSize.y*scale))*0.5f,
-                                (float)m_originalWindowSize.x*scale, (float)m_originalWindowSize.y*scale }, (Vector2){ 0, 0 }, 0.0f, WHITE);
+    DrawTexturePro(m_renderTexture.texture, raylib::Rectangle( 0.0f, 0.0f, (float)m_renderTexture.texture.width, (float)-m_renderTexture.texture.height ),
+                   raylib::Rectangle( ((float)m_window.GetWidth() - ((float)m_originalWindowSize.x*scale))*0.5f, ((float)m_window.GetHeight() - ((float)m_originalWindowSize.y*scale))*0.5f,
+                                (float)m_originalWindowSize.x*scale, (float)m_originalWindowSize.y*scale ), { 0, 0 }, 0.0f, WHITE);
     m_debugManager.draw();
     EndDrawing();
 }

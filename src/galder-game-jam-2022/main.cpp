@@ -56,6 +56,8 @@ int main(int argc, char **argv)
     int screenWidth = 400;
     int screenHeight = 240;
     raylib::Window window {screenWidth, screenHeight, "Raylib Template"};
+    window.SetState(FLAG_WINDOW_RESIZABLE);
+
     ggj::ConsoleLogger l = ggj::ConsoleLogger(ggj::LogLevel::Debug);
 
     //Handle dependency injection
@@ -68,10 +70,10 @@ int main(int argc, char **argv)
     if(!app.initialize())
         app.logger.critical("App initialization failed!");
 
-    logger.debug("This text is only visible in DEBUG builds");
-    logger.debug(fmt::format("PATH!? {0} - {1}", app.executableInfo.getContentRootDirectory().c_str(), app.executableInfo.getExecutableDirectory().c_str()));
-    logger.warning("I'm warning you!");
-    logger.error("This is dangerous!");
+//    logger.debug("This text is only visible in DEBUG builds");
+//    logger.debug(fmt::format("PATH!? {0} - {1}", app.executableInfo.getContentRootDirectory().generic_string(), app.executableInfo.getExecutableDirectory().generic_string()));
+//    logger.warning("I'm warning you!");
+//    logger.error("This is dangerous!");
 
     //raylib::Texture logo("raylib_logo.png");
 

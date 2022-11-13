@@ -32,7 +32,7 @@ namespace ggj
                     m_input {input}, m_collisionManager {collisionManager}, m_debugManager {debugManager},
                     m_animationManager {animationManager}, m_userDataManager{userDataManager}, m_map{std::move(map)}
             {
-                m_camera.target = (Vector2){ 0.f, 0.f };
+                m_camera.target = Vector2{ 0.f, 0.f };
                 m_camera.offset = {0.f, 0.f};//{8.f, 8.f};//(Vector2){ (float) window.GetWidth() / 2.0f, (float)window.GetHeight() / 2.0f };
                 m_camera.rotation = 0.0f;
                 m_camera.zoom = 1.0f;

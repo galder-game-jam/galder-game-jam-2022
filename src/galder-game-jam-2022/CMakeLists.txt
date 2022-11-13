@@ -12,6 +12,7 @@ if(LINUX)
     target_link_libraries(galder-game-jam-2022 galder-game-jam-library gamedev_base raylib_cpp raylib fmt box2d)
 elseif(WINDOWS)
     target_link_libraries(galder-game-jam-2022 galder-game-jam-library gamedev_base raylib_cpp raylib fmt box2d)
+    # target_link_options(galder-game-jam-2022 PRIVATE -mwindows)
 else()
     target_link_libraries(galder-game-jam-2022 galder-game-jam-library gamedev_base raylib_cpp raylib fmt box2d)
 

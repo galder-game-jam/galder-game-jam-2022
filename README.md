@@ -6,12 +6,11 @@ A template for game development primarily with C++ in mind. This also includes a
 - When compiled as `Debug` you also get:
   - The option to go to switch maps using the `F1` and `F2` keys.
   - Debug text via the debug manager.
-- There is no fullscreen support using raylib directly in the example, but you may use your OS to toggle it, if it has its own full screen keys. Example `MOD`+`F` on `manjaro-i3`.
 - Player controls:
     - **A / D:** Move left/right.
     - **W:** Jump.
     - **Space:** Toggle sprite rotating with physics engine.
-    - **Enter:** Toggle camera following player.
+    - **Enter:** Toggle camera following player. (Debug mode only)
 
 - All the content for the game is located inside the `content/game/content` folder. All the content inside the last `content` folder there is copied automatically to the output bin path via `CMake` when the `CMakeLists.txt` project is loaded. If any changes are done to these files, you can make sure the last files are updated by simply reloading the `CMakeLists.txt` file related to `raylib_template`. In `CLion` this is as easy as right-clicking the `CMakeLists.txt` file and choosing `Reload CMake Project`.
 
@@ -20,3 +19,8 @@ A template for game development primarily with C++ in mind. This also includes a
 # Game design document
 There is a work-in-progress GDD (game design document) inside the [design](design/README.md) folder.
 The idea is to make a GDD using `Markdown` that is easy to access through `GitHub`. It has a few examples written down, based on information that can be found in the `content/docs` folder.
+
+# Development
+- Development has been done using `GCC 12.1`, so it's recommended to use an up-to-date version of `GCC`. 
+
+- The `MSVC` version bundled with `Visual Studio 2022` `v17.4.0` was used for the Windows build.
