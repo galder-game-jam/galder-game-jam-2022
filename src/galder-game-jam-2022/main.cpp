@@ -1,4 +1,4 @@
-#include "../raylib-template-library/RaylibTemplateLibrary.h"
+#include "../galder-game-jam-library/GalderGameJamLibrary.h"
 #include "di.hpp"
 #include "fmt/color.h"
 #include "raylib-cpp.hpp"
@@ -62,7 +62,7 @@ int main(int argc, char **argv)
     auto injector = buildInjector(l, window);
     App app = injector.create<App>();
     ggj::ILogger &logger = app.logger;//game.getLogger();
-    app.window.SetTitle("Galderino's Gamo Jammo");
+    app.window.SetTitle("Galder Game Jam 2022");
 
     //Initialize everything
     if(!app.initialize())

@@ -1,3 +1,3 @@
 add_subdirectory(gamedev-base)
-add_subdirectory(raylib-template-library)
-add_subdirectory(raylib-template)
+add_subdirectory(galder-game-jam-library)
+add_subdirectory(galder-game-jam-2022)

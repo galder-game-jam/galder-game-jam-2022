@@ -40,11 +40,6 @@ namespace ggj
             raylib::Vector2 m_originalWindowSize;
             raylib::RenderTexture2D m_renderTexture;
 
-            [[deprecated("Only used for temp test code")]]
-            void updateTestStuff();
-            [[deprecated("Only used for temp test code")]]
-            void drawTestStuff();
-
             float m_lastTimeDelta {};
 
             //Just for testing

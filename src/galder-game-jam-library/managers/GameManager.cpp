@@ -25,7 +25,6 @@ void ggj::GameManager::update(float timeDelta)
     m_debugManager.clearText();
     m_worlds.update(timeDelta);
     m_debugManager.setText(0, "Debug: F1/F2/..=change map. W=jump, Space=rotate. Move = A/D");
-    updateTestStuff();
 }
 
 void ggj::GameManager::draw()
@@ -51,33 +50,4 @@ void ggj::GameManager::render()
                                 (float)m_originalWindowSize.x*scale, (float)m_originalWindowSize.y*scale }, (Vector2){ 0, 0 }, 0.0f, WHITE);
     m_debugManager.draw();
     EndDrawing();
-}
-
-void ggj::GameManager::updateTestStuff()
-{
-    std::string keys = "Keys: ";
-    bool first = true;
-    for(int16_t key : m_input.getScanCodeOfKeysPressed())
-    {
-        keys += (first) ? fmt::format("{0}", key) : fmt::format(", {0}", key);
-
-        first = false;
-    }
-    if(!first) //Only change text when something is returned
-        m_testTextKeys.SetText(keys);
-
-    m_testShouldDrawPinkRect = m_input.keysDown({ggj::KeyboardKey::R, ggj::KeyboardKey::B, ggj::KeyboardKey::P});
-}
-
-void ggj::GameManager::drawTestStuff()
-{
-    //DrawText("Congrats! You created your first window!", 10, 200, 16, LIGHTGRAY);
-    m_testRect.Draw(raylib::Color::Blue());
-    m_testText.Draw(10, 200);
-    m_testTextKeys.Draw(10, 220);
-    if(m_testShouldDrawPinkRect)
-        m_testRectPink.Draw(raylib::Color::Pink());
-
-    DrawText(fmt::format("Last update time delta: {0}", m_lastTimeDelta).c_str(), 10, 0, 16, RED);
-
 }

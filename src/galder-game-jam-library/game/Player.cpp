@@ -74,6 +74,11 @@ namespace ggj
             else
                 m_maxJumps = 2;
         }
+        //Toggle camera-follow
+        if(m_inputManager.keyPressed(KeyboardKey::Enter))
+        {
+            m_cameraShouldFollowPlayer = !m_cameraShouldFollowPlayer;
+        }
         #endif
 
         //Toggle player rotate. Fun!
@@ -85,11 +90,7 @@ namespace ggj
                 m_body->SetTransform(m_body->GetPosition(), 0);
         }
 
-        //Toggle camera-follow
-        if(m_inputManager.keyPressed(KeyboardKey::Enter))
-        {
-            m_cameraShouldFollowPlayer = !m_cameraShouldFollowPlayer;
-        }
+
         if(m_velocity.x == 0 && m_velocity.y == 0)
         {
             setPlayerState(PlayerState::Idle);

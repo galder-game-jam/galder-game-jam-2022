@@ -15,7 +15,7 @@
 #include "WorldLayer.h"
 #include "../enums/KeyboardKey.h"
 #include "../graphics/PhysicsObject.h"
-#include "../RaylibTemplateLibrary.h"
+#include "../GalderGameJamLibrary.h"
 #include "ObjectGeneratorData.hpp"
 
 namespace ggj

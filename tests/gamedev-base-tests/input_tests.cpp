@@ -4,7 +4,7 @@
 
 #include "catch.hpp"
 #include "fakeit.hpp"
-#include "../../src/raylib-template-library/RaylibTemplateLibrary.h"
+#include "../../src/galder-game-jam-library/GalderGameJamLibrary.h"
 
 using namespace fakeit;
 using namespace ggj;
