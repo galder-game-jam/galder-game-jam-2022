@@ -951,8 +951,8 @@
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":16,
-                 "x":320,
+                 "width":4.36363636363637,
+                 "x":331.636363636364,
                  "y":1408
                 }, 
                 {
@@ -973,7 +973,7 @@
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":16,
+                 "width":4.36363636363637,
                  "x":384,
                  "y":1408
                 }, 
@@ -1023,7 +1023,7 @@
                         {
                          "name":"velocity_x",
                          "type":"float",
-                         "value":3
+                         "value":0.5
                         }],
                  "rotation":0,
                  "visible":true,

@@ -52,6 +52,9 @@ namespace ggj
 
         if(a != nullptr && b != nullptr)
         {
+            if(a->getUserData()->getObjectType() == ObjectType::Enemy && a->getUserData()->getObjectType() == b->getUserData()->getObjectType())
+                contact->SetEnabled(false);
+
             a->preSolve(a, b, contact, oldManifold);
             b->preSolve(b, a, contact, oldManifold);
         }
