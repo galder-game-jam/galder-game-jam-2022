@@ -47,7 +47,9 @@ namespace ggj
             Animation m_animation;
             IMapper &m_mapper;
             PlayerState m_playerState{PlayerState::Idle};
+
             raylib::Vector2 m_startPos{};
+            bool m_isDead {false};
     };
 
 } // dev

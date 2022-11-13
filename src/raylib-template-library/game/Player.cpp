@@ -16,6 +16,11 @@ namespace ggj
         if(m_body == nullptr)
             return;
 
+        if(m_isDead)
+        {
+            m_isDead = false;
+            m_body->SetTransform(ConvertToB2Vec2(m_startPos), m_body->GetAngle());
+        }
         PhysicsObject::update(timeDelta);
 
         handleInputs(timeDelta);
@@ -111,8 +116,7 @@ namespace ggj
     {
         if(b->getUserData()->getObjectType() == ObjectType::Enemy)
         {
-            m_body->SetTransform(ConvertToB2Vec2(m_startPos), 0);
+            m_isDead = true;
         }
-        PhysicsObject::beginContact(a, b);
     }
 } // dev
