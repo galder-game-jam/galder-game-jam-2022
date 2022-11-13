@@ -47,6 +47,10 @@ namespace ggj
         add(ggj::ResourceName::GraphicsCrate, "graphics/crate.png");
         add(ggj::ResourceName::GraphicsJumpolini, "graphics/jumpolini.png");
         add(ggj::ResourceName::GraphicsNinjaSmiley, "graphics/ninja.png");
+        add(ggj::ResourceName::GraphicsGem1, "graphics/gem1.png");
+        add(ggj::ResourceName::GraphicsGem2, "graphics/gem2.png");
+        add(ggj::ResourceName::GraphicsGem3, "graphics/gem3.png");
+        add(ggj::ResourceName::GraphicsGem4, "graphics/gem4.png");
         add(ggj::ResourceName::MapProject, "maps/gamedev.tiled-project");
 
 

@@ -1234,6 +1234,96 @@
                  "width":64,
                  "x":96,
                  "y":1168
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":21,
+                 "id":88,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"gem1.png"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":21,
+                 "x":19.0909090909091,
+                 "y":32.5454545454545
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":21,
+                 "id":89,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"gem4.png"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":26,
+                 "x":52.9090909090909,
+                 "y":57.8181818181818
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":19,
+                 "id":90,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"gem3.png"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":20,
+                 "x":55.8181818181818,
+                 "y":37.8181818181818
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":25,
+                 "id":91,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"gem2.png"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":25,
+                 "x":16.5454545454546,
+                 "y":54.5454545454545
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1242,7 +1332,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":88,
+ "nextobjectid":92,
  "orientation":"orthogonal",
  "properties":[
         {
