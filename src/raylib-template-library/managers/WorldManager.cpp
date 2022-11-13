@@ -84,6 +84,11 @@ namespace ggj
         if (m_worlds.count(m_currentStage) > 0)
         {
             m_worlds[m_currentStage]->update(timeDelta);
+            if(m_worlds[m_currentStage]->isLevelCleared())
+            {
+                m_currentStage = Stage::StageFinal;
+                m_worlds[m_currentStage]->setLevelCleared(false);
+            }
         }
     }
 

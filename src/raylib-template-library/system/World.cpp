@@ -212,7 +212,11 @@ namespace ggj
         }
         if (m_player != nullptr)
         {
-
+            if(m_player->hasClearedLevel())
+            {
+                setLevelCleared(true);
+                m_player->setHasClearedLevel(false);
+            }
             m_camera.target = (m_player->cameraShouldFollowPlayer())
                               ? raylib::Vector2((float) (int) (std::round(m_player->getPosition().x) - (float) 400.f / 2),
                                                 (float) (int) (std::round(m_player->getPosition().y) - (float) 240.f / 2))
@@ -230,6 +234,8 @@ namespace ggj
             m_camera.target.y = m_cameraMax.y;
         if (m_camera.target.y < m_cameraMin.y)
             m_camera.target.y = m_cameraMin.y;
+
+
     }
 
     void World::draw()

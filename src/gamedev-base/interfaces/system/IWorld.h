@@ -19,6 +19,12 @@ namespace ggj
             virtual bool initialize() = 0;
             virtual void update(float timeDelta) = 0;
             virtual void draw() = 0;
+
+            bool isLevelCleared() const { return m_isLevelCleared; }
+            void setLevelCleared(bool isLevelCleared) { m_isLevelCleared = isLevelCleared; }
+
+        private:
+            bool m_isLevelCleared {false};
     };
 
 } // dev

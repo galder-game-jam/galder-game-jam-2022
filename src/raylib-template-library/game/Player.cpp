@@ -126,5 +126,19 @@ namespace ggj
         {
             m_isDead = true;
         }
+        if(b->getUserData()->getCommand() == "clear_level")
+        {
+            m_hasClearedLevel = true;
+        }
+    }
+
+    bool Player::hasClearedLevel() const
+    {
+        return m_hasClearedLevel;
+    }
+
+    void Player::setHasClearedLevel(bool hasClearedLevel)
+    {
+        m_hasClearedLevel = hasClearedLevel;
     }
 } // dev
