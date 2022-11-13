@@ -8,51 +8,51 @@
             802, 803, 804, 805, 806, 807, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             860, 861, 862, 863, 864, 865, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 641, 642, 643, 644, 645, 646,
             918, 919, 920, 921, 922, 923, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 699, 700, 701, 702, 703, 704,
-            976, 977, 978, 979, 980, 981, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 757, 758, 759, 760, 761, 762,
-            1034, 1035, 1036, 1037, 1038, 1039, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 815, 816, 817, 818, 819, 820,
-            1092, 1093, 1094, 1095, 1096, 1097, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 873, 874, 875, 876, 877, 878,
+            976, 977, 978, 979, 980, 981, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 212, 213, 214, 215, 0, 0, 0, 0, 757, 758, 759, 760, 761, 762,
+            1034, 1035, 1036, 1037, 1038, 1039, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 270, 271, 272, 273, 0, 0, 0, 0, 815, 816, 817, 818, 819, 820,
+            1092, 1093, 1094, 1095, 1096, 1097, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 328, 329, 330, 331, 0, 0, 0, 0, 873, 874, 875, 876, 877, 878,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 931, 932, 933, 934, 935, 936,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 989, 990, 991, 992, 993, 994,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 209, 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 266, 267, 268, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 324, 325, 326, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            145, 146, 147, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            203, 204, 205, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            261, 262, 263, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            319, 320, 321, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            377, 378, 379, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            435, 436, 437, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            493, 494, 495, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 209, 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 266, 267, 268, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 324, 325, 326, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 212, 213, 214, 215, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 270, 271, 272, 273, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 328, 329, 330, 331, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 397, 398,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 455, 456,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 209, 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 209, 210, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 266, 267, 268, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 266, 267, 268, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 324, 325, 326, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 324, 325, 326, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 410, 411, 412, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 468, 469, 470, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 526, 527, 528, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 208, 209, 210, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 266, 267, 268, 0,
+            0, 0, 0, 0, 0, 0, 651, 652, 653, 651, 652, 653, 651, 652, 653, 651, 652, 653, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 709, 710, 711, 709, 710, 711, 709, 710, 711, 709, 710, 711, 0, 0, 0, 0, 0, 0, 0, 0, 208, 209, 210, 0,
+            0, 0, 0, 0, 0, 0, 767, 768, 769, 767, 768, 769, 767, 768, 769, 767, 768, 769, 0, 0, 0, 0, 0, 0, 0, 0, 266, 267, 268, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 324, 325, 326, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -353,8 +353,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":16,
-                 "x":111.75,
-                 "y":1489.33333333333
+                 "x":112,
+                 "y":1488
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -985,236 +985,6 @@
                 {
                  "class":"PhysicsObject",
                  "ellipse":true,
-                 "height":16,
-                 "id":77,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":400,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":78,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":400,
-                 "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":79,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":416,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":80,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":416,
-                 "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":81,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":432,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":82,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":432,
-                 "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":83,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":448,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":84,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":448,
-                 "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":85,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":464.25,
-                 "y":15.75
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":86,
-                 "name":"",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"ninja.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":464,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
                  "height":64,
                  "id":87,
                  "name":"",
@@ -1251,12 +1021,17 @@
                          "name":"sprite",
                          "type":"string",
                          "value":"gem1.png"
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"clear_level"
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":21,
-                 "x":19.0909090909091,
-                 "y":32.5454545454545
+                 "x":395.090909090909,
+                 "y":25.0454545454545
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1273,12 +1048,17 @@
                          "name":"sprite",
                          "type":"string",
                          "value":"gem4.png"
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"clear_level"
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":26,
-                 "x":52.9090909090909,
-                 "y":57.8181818181818
+                 "x":445.409090909091,
+                 "y":1.3181818181818
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1296,12 +1076,17 @@
                          "name":"sprite",
                          "type":"string",
                          "value":"gem3.png"
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"clear_level"
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":20,
-                 "x":55.8181818181818,
-                 "y":37.8181818181818
+                 "x":417.318181818182,
+                 "y":28.8181818181818
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1318,12 +1103,17 @@
                          "name":"sprite",
                          "type":"string",
                          "value":"gem2.png"
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"clear_level"
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":25,
-                 "x":16.5454545454546,
-                 "y":54.5454545454545
+                 "x":442.545454545455,
+                 "y":23.0454545454545
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1520,6 +1310,789 @@
                  "width":16,
                  "x":192,
                  "y":1520
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":48.25,
+                 "id":97,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":286,
+                 "y":701.25
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":98,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":192,
+                 "y":736
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":48.25,
+                 "id":99,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":82.5,
+                 "y":700
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":100,
+                 "name":"bat",
+                 "properties":[
+                        {
+                         "name":"is_kinematic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":3
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":0
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":112,
+                 "y":656
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":32,
+                 "id":102,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":192,
+                 "x":96,
+                 "y":752
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":32,
+                 "id":103,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":48,
+                 "x":96,
+                 "y":672
+                },
+            
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":105,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":272,
+                 "y":80
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":106,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":160,
+                 "y":176
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":107,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":160,
+                 "y":336
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":108,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":272,
+                 "y":432
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":32,
+                 "id":109,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":448,
+                 "y":512
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":110,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":368,
+                 "y":608
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":111,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":160,
+                 "y":608
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":80,
+                 "id":112,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":32,
+                 "x":0,
+                 "y":224
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":113,
+                 "name":"bat",
+                 "properties":[
+                        {
+                         "name":"is_kinematic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":3
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":240,
+                 "y":528
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":115,
+                 "name":"bat",
+                 "properties":[
+                        {
+                         "name":"is_kinematic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":-2
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":-2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":240,
+                 "y":352
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":116,
+                 "name":"bat",
+                 "properties":[
+                        {
+                         "name":"is_kinematic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":-2
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":-2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":221.333333333333,
+                 "y":190
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":118,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":64,
+                 "y":64
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":119,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":64,
+                 "y":48
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":120,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":64,
+                 "y":32
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":121,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":16,
+                 "y":32
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":122,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":16,
+                 "y":48
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":123,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":""
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":16,
+                 "y":64
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":48.25,
+                 "id":124,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":6,
+                 "x":45.125,
+                 "y":31.875
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1528,8 +2101,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":92,
- "nextobjectid":97,
+ "nextobjectid":125,
  "orientation":"orthogonal",
  "properties":[
         {
