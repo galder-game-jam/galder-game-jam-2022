@@ -66,6 +66,16 @@ namespace ggj
             m_velocity = raylib::Vector2{m_velocity.x, m_velocity.y - 5.f};
         }
 
+        #ifdef GAME_DEV_DEBUG
+        if(m_inputManager.keyPressed(KeyboardKey::F9))
+        {
+            if(m_maxJumps == 2)
+                m_maxJumps = 10000;
+            else
+                m_maxJumps = 2;
+        }
+        #endif
+
         //Toggle player rotate. Fun!
         if(m_inputManager.keyPressed(KeyboardKey::Space))
         {
