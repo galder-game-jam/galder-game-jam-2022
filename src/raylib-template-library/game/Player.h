@@ -31,7 +31,7 @@ namespace ggj
             [[nodiscard]] const Vector2 &getVelocity() const;
             [[nodiscard]] bool cameraShouldFollowPlayer() const;
 
-            void beginContact(PhysicsObject *a, PhysicsObject *b) override;
+            void beginContact(PhysicsObject *a, PhysicsObject *b, b2Contact *contact) override;
 
             void update(float timeDelta) override;
             void draw() override;
@@ -50,6 +50,8 @@ namespace ggj
 
             raylib::Vector2 m_startPos{};
             bool m_isDead {false};
+            int m_maxJumps{2};
+            int m_jumps{0};
     };
 
 } // dev

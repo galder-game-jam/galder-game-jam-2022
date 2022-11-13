@@ -16,8 +16,8 @@ namespace ggj
         
         if(a != nullptr && b != nullptr)
         {
-            a->beginContact(a, b);
-            b->beginContact(b, a);
+            a->beginContact(a, b, contact);
+            b->beginContact(b, a, contact);
             UserData* userDataA = a->getUserData();
             UserData* userDataB = b->getUserData();
             bodyA->SetLinearVelocity({userDataB->getForce().x, userDataB->getForce().y});
@@ -35,8 +35,8 @@ namespace ggj
 
         if(a != nullptr && b != nullptr)
         {
-            a->endContact(a, b);
-            b->endContact(b, a);
+            a->endContact(a, b, contact);
+            b->endContact(b, a, contact);
         }
     }
 
@@ -50,8 +50,8 @@ namespace ggj
 
         if(a != nullptr && b != nullptr)
         {
-            a->preSolve(a, b, oldManifold);
-            b->preSolve(b, a, oldManifold);
+            a->preSolve(a, b, contact, oldManifold);
+            b->preSolve(b, a, contact, oldManifold);
         }
     }
 
@@ -65,8 +65,8 @@ namespace ggj
 
         if(a != nullptr && b != nullptr)
         {
-            a->postSolve(a, b, impulse);
-            b->postSolve(b, a, impulse);
+            a->postSolve(a, b, contact, impulse);
+            b->postSolve(b, a, contact, impulse);
         }
     }
 } // dev

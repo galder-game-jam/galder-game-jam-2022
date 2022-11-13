@@ -569,6 +569,11 @@
                          "value":true
                         }, 
                         {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"jumpolini.png"
+                        }, 
+                        {
                          "name":"userdata_force_y",
                          "type":"float",
                          "value":-100

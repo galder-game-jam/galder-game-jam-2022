@@ -60,8 +60,9 @@ namespace ggj
         }
 
         //Jump
-        if(m_inputManager.keyPressed(KeyboardKey::W))
+        if(m_inputManager.keyPressed(KeyboardKey::W) && m_jumps < m_maxJumps)
         {
+            ++m_jumps;
             m_velocity = raylib::Vector2{m_velocity.x, m_velocity.y - 5.f};
         }
 
@@ -112,8 +113,15 @@ namespace ggj
         m_animation = m_animationManager.getAnimation(m_mapper.getAnimationNameByPlayerState(playerState));
     }
 
-    void Player::beginContact(PhysicsObject *a, PhysicsObject *b)
+    void Player::beginContact(PhysicsObject *a, PhysicsObject *b, b2Contact *contact)
     {
+        b2Manifold *manifold = contact->GetManifold();
+        b2WorldManifold worldManifold;
+        contact->GetWorldManifold(&worldManifold); //Required to calculate manifold when circle hits circle
+
+        if(manifold->localNormal.y < -0.8f || worldManifold.normal.y > 0.5f)
+            m_jumps = 0;
+
         if(b->getUserData()->getObjectType() == ObjectType::Enemy)
         {
             m_isDead = true;

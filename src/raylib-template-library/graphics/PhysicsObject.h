@@ -29,10 +29,10 @@ namespace ggj
             void update(float timeDelta) override;
             void draw() override;
 
-            virtual void beginContact(PhysicsObject* a, PhysicsObject* b){}
-            virtual void endContact(PhysicsObject* a, PhysicsObject* b){}
-            virtual void preSolve(PhysicsObject* a, PhysicsObject* b, const b2Manifold *oldManifold){}
-            virtual void postSolve(PhysicsObject* a, PhysicsObject* b, const b2ContactImpulse *impulse){}
+            virtual void beginContact(PhysicsObject* a, PhysicsObject* b, b2Contact *contact){}
+            virtual void endContact(PhysicsObject* a, PhysicsObject* b, b2Contact *contact){}
+            virtual void preSolve(PhysicsObject* a, PhysicsObject* b, b2Contact *contact, const b2Manifold *oldManifold){}
+            virtual void postSolve(PhysicsObject* a, PhysicsObject* b, b2Contact *contact, const b2ContactImpulse *impulse){}
 
             UserData* getUserData();
 

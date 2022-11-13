@@ -11,7 +11,7 @@ namespace ggj
 
     }
 
-    void Bat::beginContact(PhysicsObject *a, PhysicsObject *b)
+    void Bat::beginContact(PhysicsObject *a, PhysicsObject *b, b2Contact *contact)
     {
         UserData* userDataB = b->getUserData();
 
