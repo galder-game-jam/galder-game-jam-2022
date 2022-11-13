@@ -23,6 +23,10 @@ namespace ggj
         Crate = 11,
         NinjaSmiley = 12,
         Jumpolini = 13,
+        Gem1 = 14,
+        Gem2 = 15,
+        Gem3 = 16,
+        Gem4 = 17,
     };
 }
 #endif //GAME_DEV_TEMPLATE_TEXTURENAME_H
