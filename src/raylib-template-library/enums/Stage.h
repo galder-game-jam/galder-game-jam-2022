@@ -13,6 +13,7 @@ namespace ggj
         Stage1 = 1,
         Stage2 = 2,
         Stage3 = 3,
+        StageFinal = 100,
     };
 }
 #endif //GAME_DEV_TEMPLATE_STAGE_H

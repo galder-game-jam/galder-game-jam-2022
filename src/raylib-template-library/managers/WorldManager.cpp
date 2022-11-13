@@ -75,6 +75,7 @@ namespace ggj
         if (m_input.keyPressed(ggj::KeyboardKey::F1)) m_currentStage = Stage::Stage1;
         if (m_input.keyPressed(ggj::KeyboardKey::F2)) m_currentStage = Stage::Stage2;
         if (m_input.keyPressed(ggj::KeyboardKey::F3)) m_currentStage = Stage::Stage3;
+        if (m_input.keyPressed(ggj::KeyboardKey::F4)) m_currentStage = Stage::StageFinal;
         #endif
 
         if (m_currentStage == Stage::None)
@@ -102,6 +103,7 @@ namespace ggj
         if (filename == "map3.json") return Stage::Stage1;
         if (filename == "map2.json") return Stage::Stage2;
         if (filename == "map1.json") return Stage::Stage3;
+        if (filename == "finalmap.json") return Stage::StageFinal;
 
         return Stage::None;
     }
