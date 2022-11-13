@@ -154,14 +154,14 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 129, 130, 131, 132, 133, 134, 135, 136, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 187, 188, 189, 190, 191, 192, 193, 194, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 245, 246, 247, 248, 249, 250, 251, 252, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 303, 304, 305, 306, 307, 308, 309, 310, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 361, 362, 363, 364, 365, 366, 367, 368, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 419, 420, 421, 422, 423, 424, 425, 426, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 477, 478, 479, 480, 481, 482, 483, 484, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 535, 536, 537, 538, 539, 540, 541, 542, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -713,20 +713,20 @@
                  "name":"",
                  "rotation":0,
                  "visible":true,
-                 "width":16,
+                 "width":2.33333333333333,
                  "x":0,
                  "y":16
                 }, 
                 {
                  "class":"PhysicsObject",
-                 "height":32,
+                 "height":3.47768595041322,
                  "id":62,
                  "name":"",
                  "rotation":0,
                  "visible":true,
-                 "width":16,
-                 "x":16,
-                 "y":80
+                 "width":95.6363636363636,
+                 "x":0,
+                 "y":111.897520661157
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -735,42 +735,9 @@
                  "name":"",
                  "rotation":0,
                  "visible":true,
-                 "width":16,
-                 "x":80,
+                 "width":1.66666666666667,
+                 "x":94.3333333333333,
                  "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "height":16,
-                 "id":64,
-                 "name":"",
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":64,
-                 "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "height":16,
-                 "id":65,
-                 "name":"",
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":16,
-                 "y":16
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "height":32,
-                 "id":66,
-                 "name":"",
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":64,
-                 "y":80
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1313,7 +1280,7 @@
                 }, 
                 {
                  "class":"PhysicsObject",
-                 "height":48.25,
+                 "height":140.5,
                  "id":97,
                  "name":"enemyTurn",
                  "properties":[
@@ -1331,7 +1298,7 @@
                  "visible":true,
                  "width":16,
                  "x":286,
-                 "y":701.25
+                 "y":609
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1389,7 +1356,7 @@
                 }, 
                 {
                  "class":"PhysicsObject",
-                 "height":48.25,
+                 "height":140.25,
                  "id":99,
                  "name":"enemyTurn",
                  "properties":[
@@ -1407,7 +1374,7 @@
                  "visible":true,
                  "width":16,
                  "x":82.5,
-                 "y":700
+                 "y":608
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1487,8 +1454,7 @@
                  "width":48,
                  "x":96,
                  "y":672
-                },
-            
+                }, 
                 {
                  "class":"PhysicsObject",
                  "height":16,
@@ -1521,7 +1487,8 @@
                  "width":16,
                  "x":160,
                  "y":336
-                }, 
+                },
+            
                 {
                  "class":"PhysicsObject",
                  "height":16,
@@ -1745,8 +1712,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":16,
-                 "x":221.333333333333,
-                 "y":190
+                 "x":288,
+                 "y":240
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -1778,7 +1745,7 @@
                         {
                          "name":"userdata_command",
                          "type":"string",
-                         "value":""
+                         "value":"enemy_turn"
                         }, 
                         {
                          "name":"userdata_objecttype",
@@ -1799,224 +1766,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":14,
-                 "x":64,
-                 "y":64
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":14,
-                 "id":119,
-                 "name":"snake",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"characters.png"
-                        }, 
-                        {
-                         "name":"sprite_size_x",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"sprite_size_y",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"userdata_command",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"userdata_objecttype",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"userdata_objecttype_enum",
-                         "propertytype":"ObjectType",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"velocity_x",
-                         "type":"float",
-                         "value":2
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":14,
-                 "x":64,
-                 "y":48
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":14,
-                 "id":120,
-                 "name":"snake",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"characters.png"
-                        }, 
-                        {
-                         "name":"sprite_size_x",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"sprite_size_y",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"userdata_command",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"userdata_objecttype",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"userdata_objecttype_enum",
-                         "propertytype":"ObjectType",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"velocity_x",
-                         "type":"float",
-                         "value":2
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":14,
-                 "x":64,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":14,
-                 "id":121,
-                 "name":"snake",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"characters.png"
-                        }, 
-                        {
-                         "name":"sprite_size_x",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"sprite_size_y",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"userdata_command",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"userdata_objecttype",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"userdata_objecttype_enum",
-                         "propertytype":"ObjectType",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"velocity_x",
-                         "type":"float",
-                         "value":2
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":14,
-                 "x":16,
-                 "y":32
-                }, 
-                {
-                 "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":14,
-                 "id":122,
-                 "name":"snake",
-                 "properties":[
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"characters.png"
-                        }, 
-                        {
-                         "name":"sprite_size_x",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"sprite_size_y",
-                         "type":"int",
-                         "value":32
-                        }, 
-                        {
-                         "name":"userdata_command",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"userdata_objecttype",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"userdata_objecttype_enum",
-                         "propertytype":"ObjectType",
-                         "type":"int",
-                         "value":2
-                        }, 
-                        {
-                         "name":"velocity_x",
-                         "type":"float",
-                         "value":2
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":14,
-                 "x":16,
-                 "y":48
+                 "x":57.2727272727273,
+                 "y":64.5454545454545
                 }, 
                 {
                  "class":"PhysicsObject",
@@ -2048,7 +1799,7 @@
                         {
                          "name":"userdata_command",
                          "type":"string",
-                         "value":""
+                         "value":"enemy_turn"
                         }, 
                         {
                          "name":"userdata_objecttype",
@@ -2069,12 +1820,12 @@
                  "rotation":0,
                  "visible":true,
                  "width":14,
-                 "x":16,
-                 "y":64
+                 "x":17.6363636363636,
+                 "y":95.6363636363636
                 }, 
                 {
                  "class":"PhysicsObject",
-                 "height":48.25,
+                 "height":94.9772727272727,
                  "id":124,
                  "name":"enemyTurn",
                  "properties":[
@@ -2091,8 +1842,401 @@
                  "rotation":0,
                  "visible":true,
                  "width":6,
-                 "x":45.125,
-                 "y":31.875
+                 "x":87.6704545454545,
+                 "y":16.5719696969697
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":95.3409090909091,
+                 "id":125,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":6,
+                 "x":2.72727272727273,
+                 "y":16.3295454545455
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":3.47769,
+                 "id":126,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":95.6364,
+                 "x":0,
+                 "y":80
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":3.47769,
+                 "id":127,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":95.6364,
+                 "x":0,
+                 "y":48
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":129,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":29.5454545454545,
+                 "y":26.0909090909091
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":130,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":60.4545454545455,
+                 "y":25
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":131,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":15.7272727272727,
+                 "y":56.6363636363636
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":132,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":39.3636363636364,
+                 "y":89
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":14,
+                 "id":133,
+                 "name":"snake",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":2
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":14,
+                 "x":63.9090909090909,
+                 "y":92.0909090909091
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":16,
+                 "id":134,
+                 "name":"bat",
+                 "properties":[
+                        {
+                         "name":"is_kinematic",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"bat.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":2
+                        }, 
+                        {
+                         "name":"velocity_x",
+                         "type":"float",
+                         "value":0
+                        }, 
+                        {
+                         "name":"velocity_y",
+                         "type":"float",
+                         "value":3
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":464,
+                 "y":752
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":29.5,
+                 "id":135,
+                 "name":"enemyTurn",
+                 "properties":[
+                        {
+                         "name":"is_trigger",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"enemy_turn"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":129.75,
+                 "y":674.375
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2101,7 +2245,7 @@
          "y":0
         }],
  "nextlayerid":4,
- "nextobjectid":125,
+ "nextobjectid":136,
  "orientation":"orthogonal",
  "properties":[
         {
