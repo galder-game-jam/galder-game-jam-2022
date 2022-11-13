@@ -22,6 +22,7 @@ namespace ggj
         Bat = 10,
         Crate = 11,
         NinjaSmiley = 12,
+        Jumpolini = 13,
     };
 }
 #endif //GAME_DEV_TEMPLATE_TEXTURENAME_H

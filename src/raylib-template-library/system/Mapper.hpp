@@ -27,6 +27,7 @@ namespace ggj
                 m_strToTex["bat.png"] = TextureName::Bat;
                 m_strToTex["crate.png"] = TextureName::Crate;
                 m_strToTex["ninja.png"] = TextureName::NinjaSmiley;
+                m_strToTex["jumpolini.png"] = TextureName::Jumpolini;
 
                 m_texToRes[TextureName::Player] = ResourceName::GraphicsPlayer;
                 m_texToRes[TextureName::Tileset1] = ResourceName::GraphicsTileset1;
@@ -38,6 +39,7 @@ namespace ggj
                 m_texToRes[TextureName::Bat] = ResourceName::GraphicsEnemyBat;
                 m_texToRes[TextureName::Crate] = ResourceName::GraphicsCrate;
                 m_texToRes[TextureName::NinjaSmiley] = ResourceName::GraphicsNinjaSmiley;
+                m_texToRes[TextureName::Jumpolini] = ResourceName::GraphicsJumpolini;
             };
 
             TextureName getTextureNameByString(const std::string &id) override

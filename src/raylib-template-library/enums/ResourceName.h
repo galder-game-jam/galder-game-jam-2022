@@ -36,6 +36,7 @@ namespace ggj
         GraphicsEnemyBat = 11,
         GraphicsCrate = 12,
         GraphicsNinjaSmiley = 13,
+        GraphicsJumpolini = 14
     };
 }
 
