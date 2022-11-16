@@ -9,12 +9,11 @@
 
 ## Player abilities
 - Jump: Two jumps
-- 
+
 ### Powerups
 - Can be both positive and negative.
 - Super-jump
 - Sticky - makes player able to stick to the wall/ceiling
-- 
 
 ### Map structure
 - Start from the bottom - goal: Get to the top
