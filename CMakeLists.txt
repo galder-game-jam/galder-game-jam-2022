@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.23)
-project(game_dev_template VERSION 1.0.0)
+project(galder-game-jam-2022-project VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 20)
 

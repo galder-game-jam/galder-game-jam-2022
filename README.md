@@ -1,5 +1,5 @@
 # Galder Game Jam 2022
-A game jam that found place in 11.-13.November. A
+A game jam with André Søberg and Robin Berg Pettersen that found place on 11.-13.November. 
 
 # The Game
 - `galder-game-jam-2022` contains simple code to showcase a very minimal 
@@ -13,14 +13,20 @@ A game jam that found place in 11.-13.November. A
     - **W:** Jump.
     - **Space:** Toggle sprite rotating with physics engine.
     - **Enter:** Toggle camera following player. (Debug mode only)
+![](content/ggj-2022.gif)
+
+- The objective of the game is simple: Get to the top of the map and grab the jewels! A great surprise awaits when you get to them :monocle_face:
 
 - All the content for the game is located inside the `content/game/content` folder. All the content inside the last `content` folder there is copied automatically to the output bin path via `CMake` when the `CMakeLists.txt` project is loaded. If any changes are done to these files, you can make sure the last files are updated by simply reloading the `CMakeLists.txt` file related to `raylib_template`. In `CLion` this is as easy as right-clicking the `CMakeLists.txt` file and choosing `Reload CMake Project`.
 
 - Maps: The maps are created using `Tiled`, and uses a `tiled-project` on the top level. If you want to modify the map files, make sure things are loaded through opening the `gamedev.tiled-project` in `Tiled`. The reason why this is important is that some types can only be resolved through the common `tiled-project`.
+![](content/ggj-2022-tiled.png)
 
 # Game design document
-There is a work-in-progress GDD (game design document) inside the [design](design/README.md) folder.
-The idea is to make a GDD using `Markdown` that is easy to access through `GitHub`. It has a few examples written down, based on information that can be found in the `content/docs` folder.
+Since the whole design process was a part of the game jam, the game design document is very limited, but
+we have written down the [brainstorming](design/brainstorming/README.md) ideas. 
+As expected: Only a few of the ideas were small enough to fit the scope of creating a working game engine 
+with a playable game on a weekend.
 
 # Development
 - CMake is used as the build system, and `CLion` was used as `IDE`.
