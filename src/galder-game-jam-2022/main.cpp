@@ -24,7 +24,7 @@ auto buildInjector(ggj::ILogger &logger, raylib::Window &window)
             #endif
             boost::di::bind<ggj::CollisionManager>(),
             boost::di::bind<raylib::Window>().to(window),
-            boost::di::bind<ggj::ILogger>().to(logger)//.to(ggj::ConsoleLogger(ggj::LogLevel::Error))
+            boost::di::bind<ggj::ILogger>().to(logger)
     );
 
     return injector;
@@ -63,19 +63,12 @@ int main(int argc, char **argv)
     //Handle dependency injection
     auto injector = buildInjector(l, window);
     App app = injector.create<App>();
-    ggj::ILogger &logger = app.logger;//game.getLogger();
+    ggj::ILogger &logger = app.logger;
     app.window.SetTitle("Galder Game Jam 2022");
 
     //Initialize everything
     if(!app.initialize())
         app.logger.critical("App initialization failed!");
-
-//    logger.debug("This text is only visible in DEBUG builds");
-//    logger.debug(fmt::format("PATH!? {0} - {1}", app.executableInfo.getContentRootDirectory().generic_string(), app.executableInfo.getExecutableDirectory().generic_string()));
-//    logger.warning("I'm warning you!");
-//    logger.error("This is dangerous!");
-
-    //raylib::Texture logo("raylib_logo.png");
 
     SetTargetFPS(60);
     ggj::Timer timer;
@@ -86,8 +79,6 @@ int main(int argc, char **argv)
         timer.restart();
         app.game.draw();
     }
-
-    // UnloadTexture() and CloseWindow() are called automatically.
 
     return 0;
 }
