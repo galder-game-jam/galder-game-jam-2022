@@ -128,8 +128,11 @@ namespace ggj
 //        return Stage::None;
 //    }
 
-    int32_t WorldManager::getStageIndexByFilename(const std::string &filename)
+    int32_t WorldManager::getStageIndexByFilename(const std::string &filename) const
     {
+        if(filename.starts_with("finalmap.json"))
+            return FINAL_MAP_ID;
+
         if(!filename.starts_with("final") && filename.starts_with("map"))
         {
             try
@@ -142,6 +145,6 @@ namespace ggj
                 return -1;
             }
         }
-        return FINAL_MAP_ID;
+        return -1;
     }
 }

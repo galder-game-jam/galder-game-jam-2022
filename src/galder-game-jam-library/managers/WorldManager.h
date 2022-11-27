@@ -42,7 +42,7 @@ namespace ggj
             const int32_t FINAL_MAP_ID = 99999;
 
             //Stage getStageByFilename(const std::string &filename);
-            int32_t getStageIndexByFilename(const std::string &filename);
+            [[nodiscard]] int32_t getStageIndexByFilename(const std::string &filename) const;
 
             ggj::ILogger &m_logger;
             ggj::IResourceManager<ResourceName> &m_resources;
