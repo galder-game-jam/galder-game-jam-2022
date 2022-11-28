@@ -35,8 +35,9 @@ namespace ggj
             {
                 if (file.filename().string().ends_with(".json")) //Make sure it's a map!
                 {
-                    Stage stage = getStageByFilename(file.filename().generic_string());
-                    if (stage == Stage::None)
+                    //Stage stage = getStageByFilename(file.filename().generic_string());
+                    int32_t stage = getStageIndexByFilename(file.filename().generic_string());
+                    if (stage == -1)
                     {
                         m_logger.warning(fmt::format("The filename '{0}' is not recognized as a stage. File is ignored...", file.filename().generic_string()));
                         continue;
@@ -45,6 +46,15 @@ namespace ggj
 
                     if (map->getStatus() == tson::ParseStatus::OK)
                     {
+
+                        if(m_startupIndex < 0 && !file.filename().string().starts_with("final") && file.filename().string().starts_with("map"))
+                        {
+                            bool isStartup = map->get<bool>("is_startup_map");
+                            if(isStartup)
+                            {
+                                m_startupIndex = getStageIndexByFilename(file.filename().string());
+                            }
+                        }
                         m_worlds[stage] = std::make_unique<World>(m_logger, m_resources, m_mapper, m_textures, m_window, m_input, m_collisionManager, m_debugManager, m_animationManager, m_userDataManager, std::move(map));
                         m_worlds[stage]->initialize();
                         m_logger.debug(fmt::format("World added: {0}", file.filename().generic_string()));
@@ -54,6 +64,9 @@ namespace ggj
                 }
             }
         }
+        m_currentStageIndex = m_startupIndex;
+        if(m_currentStageIndex < 0)
+            m_currentStageIndex = 1;
 
         //Expect something!
         if (m_worlds.empty())
@@ -61,8 +74,8 @@ namespace ggj
             m_logger.error("No maps found! initialization of WorldManager failed!");
             return false;
         }
-        if (m_worlds.count(Stage::Stage1) > 0)
-            m_currentStage = Stage::Stage1;
+//        if (m_worlds.count(m_currentStageIndex) > 0)
+//            m_currentStage = Stage::Stage1;
 
         m_logger.debug("WorldManager initialized SUCCESSFULLY!");
 
@@ -72,44 +85,66 @@ namespace ggj
     void WorldManager::update(float timeDelta)
     {
         #ifdef GAME_DEV_DEBUG
-        if (m_input.keyPressed(ggj::KeyboardKey::F1)) m_currentStage = Stage::Stage1;
-        if (m_input.keyPressed(ggj::KeyboardKey::F2)) m_currentStage = Stage::Stage2;
-        if (m_input.keyPressed(ggj::KeyboardKey::F3)) m_currentStage = Stage::Stage3;
-        if (m_input.keyPressed(ggj::KeyboardKey::F4)) m_currentStage = Stage::StageFinal;
+        if (m_input.keyPressed(ggj::KeyboardKey::F1)) m_currentStageIndex = 1;
+        if (m_input.keyPressed(ggj::KeyboardKey::F2)) m_currentStageIndex = 2;
+        if (m_input.keyPressed(ggj::KeyboardKey::F3)) m_currentStageIndex = 3;
+        if (m_input.keyPressed(ggj::KeyboardKey::F4)) m_currentStageIndex = FINAL_MAP_ID;
         #endif
 
-        if (m_currentStage == Stage::None)
+        if (m_currentStageIndex == NO_MAP_ID)
             return;
 
-        if (m_worlds.count(m_currentStage) > 0)
+        if (m_worlds.count(m_currentStageIndex) > 0)
         {
-            m_worlds[m_currentStage]->update(timeDelta);
-            if(m_worlds[m_currentStage]->isLevelCleared())
+            m_worlds[m_currentStageIndex]->update(timeDelta);
+            if(m_worlds[m_currentStageIndex]->isLevelCleared())
             {
-                m_currentStage = Stage::StageFinal;
-                m_worlds[m_currentStage]->setLevelCleared(false);
+                m_worlds[m_currentStageIndex]->setLevelCleared(false);
+                ++m_currentStageIndex;
+                if(m_worlds.count(m_currentStageIndex) == 0)
+                    m_currentStageIndex = FINAL_MAP_ID;
             }
         }
     }
 
     void WorldManager::draw()
     {
-        if (m_currentStage == Stage::None)
+        if (m_currentStageIndex == -1)
             return;
 
-        if (m_worlds.count(m_currentStage) > 0)
+        if (m_worlds.count(m_currentStageIndex) > 0)
         {
-            m_worlds[m_currentStage]->draw();
+            m_worlds[m_currentStageIndex]->draw();
         }
     }
 
-    Stage WorldManager::getStageByFilename(const std::string &filename)
-    {
-        if (filename == "map3.json") return Stage::Stage1;
-        if (filename == "map2.json") return Stage::Stage2;
-        if (filename == "map1.json") return Stage::Stage3;
-        if (filename == "finalmap.json") return Stage::StageFinal;
+//    Stage WorldManager::getStageByFilename(const std::string &filename)
+//    {
+//        if (filename == "map3.json") return Stage::Stage1;
+//        if (filename == "map2.json") return Stage::Stage2;
+//        if (filename == "map1.json") return Stage::Stage3;
+//        if (filename == "finalmap.json") return Stage::StageFinal;
+//
+//        return Stage::None;
+//    }
 
-        return Stage::None;
+    int32_t WorldManager::getStageIndexByFilename(const std::string &filename) const
+    {
+        if(filename.starts_with("finalmap.json"))
+            return FINAL_MAP_ID;
+
+        if(!filename.starts_with("final") && filename.starts_with("map"))
+        {
+            try
+            {
+                std::string mapNoStr = filename.substr(3, filename.length() - 3 - 5); // Minus: "map" and ".json"
+                return std::stoi(mapNoStr);
+            }
+            catch(const std::exception &e)
+            {
+                return -1;
+            }
+        }
+        return -1;
     }
 }

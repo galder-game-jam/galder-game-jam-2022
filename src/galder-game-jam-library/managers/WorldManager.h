@@ -5,7 +5,6 @@
 #ifndef GAME_DEV_TEMPLATE_WORLDMANAGER_H
 #define GAME_DEV_TEMPLATE_WORLDMANAGER_H
 
-#include "../enums/Stage.h"
 #include "../enums/ResourceName.h"
 #include "../../gamedev-base/GameDevBase.h"
 #include "../system/World.h"
@@ -39,7 +38,11 @@ namespace ggj
         private:
             bool parseProject();
 
-            Stage getStageByFilename(const std::string &filename);
+            const int32_t NO_MAP_ID = -1;
+            const int32_t FINAL_MAP_ID = 99999;
+
+            //Stage getStageByFilename(const std::string &filename);
+            [[nodiscard]] int32_t getStageIndexByFilename(const std::string &filename) const;
 
             ggj::ILogger &m_logger;
             ggj::IResourceManager<ResourceName> &m_resources;
@@ -54,8 +57,10 @@ namespace ggj
 
             std::unique_ptr<tson::Project> m_project{nullptr};
 
-            std::map<Stage, std::unique_ptr<ggj::IWorld<Stage>>> m_worlds;
-            Stage m_currentStage{Stage::None};
+            std::map<int32_t, std::unique_ptr<ggj::IWorld<int32_t>>> m_worlds;
+            //Stage m_currentStage{Stage::None};
+            int32_t m_startupIndex{-1};
+            int32_t m_currentStageIndex {-1};
             //std::vector<std::unique_ptr<tson::Map>> m_maps;
 
     };

@@ -205,9 +205,36 @@
                 }, 
                 {
                  "class":"PhysicsObject",
+                 "height":21,
+                 "id":14,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"gem4.png"
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"clear_level"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":26,
+                 "x":357.37037037037,
+                 "y":198.076998050682
+                }, 
+                {
+                 "class":"PhysicsObject",
                  "ellipse":true,
                  "height":16,
-                 "id":13,
+                 "id":15,
                  "name":"player1",
                  "properties":[
                         {
@@ -223,13 +250,34 @@
                         {
                          "name":"sprite",
                          "type":"string",
-                         "value":"player-simple.png"
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":1
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":1
                         }],
                  "rotation":0,
                  "visible":true,
                  "width":16,
-                 "x":47.2528585144453,
-                 "y":72.7394605917779
+                 "x":48.9200779727096,
+                 "y":83.2280701754387
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -290,7 +338,7 @@
          "y":0
         }],
  "nextlayerid":8,
- "nextobjectid":14,
+ "nextobjectid":16,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -302,6 +350,11 @@
          "name":"gravity_y",
          "type":"float",
          "value":10
+        }, 
+        {
+         "name":"is_startup_map",
+         "type":"bool",
+         "value":false
         }],
  "renderorder":"left-down",
  "tiledversion":"1.9.2",

@@ -6,7 +6,6 @@
 #define GAME_DEV_TEMPLATE_WORLD_H
 
 #include "../../gamedev-base/GameDevBase.h"
-#include "../enums/Stage.h"
 #include "../enums/ResourceName.h"
 #include "box2d/box2d.h"
 #include "tileson.hpp"
@@ -20,7 +19,7 @@
 
 namespace ggj
 {
-    class World : public ggj::IWorld<Stage>
+    class World : public ggj::IWorld<int32_t>
     {
         public:
             World(ggj::ILogger &logger, ggj::IResourceManager<ResourceName> &resources, IMapper &mapper,

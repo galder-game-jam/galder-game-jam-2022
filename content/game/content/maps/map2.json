@@ -251,34 +251,6 @@
                 }, 
                 {
                  "class":"PhysicsObject",
-                 "ellipse":true,
-                 "height":16,
-                 "id":16,
-                 "name":"player1",
-                 "properties":[
-                        {
-                         "name":"is_player",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"is_static",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"sprite",
-                         "type":"string",
-                         "value":"player-simple.png"
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":16,
-                 "x":16,
-                 "y":192
-                }, 
-                {
-                 "class":"PhysicsObject",
                  "height":16,
                  "id":17,
                  "name":"",
@@ -378,6 +350,82 @@
                  "width":16,
                  "x":288,
                  "y":16
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "ellipse":true,
+                 "height":16,
+                 "id":24,
+                 "name":"player1",
+                 "properties":[
+                        {
+                         "name":"is_player",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"characters.png"
+                        }, 
+                        {
+                         "name":"sprite_size_x",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"sprite_size_y",
+                         "type":"int",
+                         "value":32
+                        }, 
+                        {
+                         "name":"userdata_objecttype",
+                         "type":"int",
+                         "value":1
+                        }, 
+                        {
+                         "name":"userdata_objecttype_enum",
+                         "propertytype":"ObjectType",
+                         "type":"int",
+                         "value":1
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":16,
+                 "x":16,
+                 "y":192
+                }, 
+                {
+                 "class":"PhysicsObject",
+                 "height":25,
+                 "id":25,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"is_static",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"sprite",
+                         "type":"string",
+                         "value":"gem2.png"
+                        }, 
+                        {
+                         "name":"userdata_command",
+                         "type":"string",
+                         "value":"clear_level"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":25,
+                 "x":304,
+                 "y":160
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -438,7 +486,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":24,
+ "nextobjectid":26,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -450,6 +498,11 @@
          "name":"gravity_y",
          "type":"float",
          "value":10
+        }, 
+        {
+         "name":"is_startup_map",
+         "type":"bool",
+         "value":false
         }],
  "renderorder":"left-down",
  "tiledversion":"1.9.2",

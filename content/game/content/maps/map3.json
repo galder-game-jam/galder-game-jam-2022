@@ -2561,6 +2561,11 @@
          "name":"gravity_y",
          "type":"float",
          "value":10
+        }, 
+        {
+         "name":"is_startup_map",
+         "type":"bool",
+         "value":true
         }],
  "renderorder":"left-down",
  "tiledversion":"1.9.2",
