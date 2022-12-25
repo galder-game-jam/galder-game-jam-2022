@@ -10,3 +10,5 @@ cmake-build-release/
 cmake-build-relwithdebinfo/
 
 *.tiled-session
+
+.DS_Store

@@ -7,6 +7,7 @@
 
 #ifdef __clang__
     #include <libc.h>
+    #include <mach-o/dyld.h>
 #endif
 
 
@@ -20,6 +21,14 @@ namespace ggj
     {
         #if defined(_MSC_VER)
         return std::filesystem::current_path(); //NOTE: This will just give the path to the executable folder, but is not in use for anything special, so wasn't prioritized!
+        #elif __clang__
+        char buf [PATH_MAX];
+        uint32_t bufsize = PATH_MAX;
+        if(!_NSGetExecutablePath(buf, &bufsize))
+            puts(buf);
+
+        std::filesystem::path path {buf};
+        return path;
         #else
         char path[FILENAME_MAX];
         ssize_t count = readlink("/proc/self/exe", path, FILENAME_MAX);
@@ -31,6 +40,14 @@ namespace ggj
     {
         #if defined(_MSC_VER)
         return std::filesystem::current_path();
+        #elif __clang__
+        char buf [PATH_MAX];
+        uint32_t bufsize = PATH_MAX;
+        if(!_NSGetExecutablePath(buf, &bufsize))
+            puts(buf);
+
+        std::filesystem::path path {buf};
+        return path.parent_path();
         #else
         char path[FILENAME_MAX];
         ssize_t count = readlink("/proc/self/exe", path, FILENAME_MAX);
