@@ -23,7 +23,7 @@ endif()
 
 set(LINUX 0)
 set(WINDOWS 0)
-set(APPLE 0)
+# set(APPLE 0) #This is set by the OS
 set(MSVC 0)
 set(MINGW 0)
 

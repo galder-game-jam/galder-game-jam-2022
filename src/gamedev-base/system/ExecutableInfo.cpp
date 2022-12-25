@@ -3,6 +3,7 @@
 //
 
 #include <atomic>
+#include <libc.h>
 #include "ExecutableInfo.h"
 
 //#if defined(_MSC_VER)
