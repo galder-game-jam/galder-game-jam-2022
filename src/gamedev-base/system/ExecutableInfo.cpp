@@ -2,9 +2,13 @@
 // Created by robin on 27.10.22.
 //
 
-#include <atomic>
-#include <libc.h>
 #include "ExecutableInfo.h"
+#include <atomic>
+
+#ifdef __clang__
+    #include <libc.h>
+#endif
+
 
 //#if defined(_MSC_VER)
 //#include <libloaderapi.h>
