@@ -1,1 +1,1 @@
-add_subdirectory(gamedev-base-tests)
+add_subdirectory(galder-game-jam-library-tests)

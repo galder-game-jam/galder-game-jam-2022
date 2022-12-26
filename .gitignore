@@ -3,6 +3,9 @@
 
 cmake-build-debug/
 
+cmake-build-debug-osx-intel/
+cmake-build-debug-osx-m1/
+
 cmake-build-minsizerel/
 
 cmake-build-release/
