@@ -11,7 +11,7 @@ if(LINUX)
 elseif(WINDOWS)
     # Copies game content to the executable folder when CMake file is loaded.
     file(COPY ${CMAKE_SOURCE_DIR}/content/game/content DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-    add_executable(galder-game-jam-2022 main.cpp)
+    add_executable(galder-game-jam-2022 main.cpp ${CMAKE_SOURCE_DIR}/content/logo/icon.rc)
     target_link_libraries(galder-game-jam-2022 galder-game-jam-library gamedev_base raylib_cpp raylib fmt box2d)
     # target_link_options(galder-game-jam-2022 PRIVATE -mwindows)
 else()
