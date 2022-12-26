@@ -66,7 +66,7 @@ int main(int argc, char **argv)
     ggj::ILogger &logger = app.logger;
     app.window.SetTitle("Galder Game Jam 2022");
 
-    logger.information(fmt::format("Content path: {0}", app.executableInfo.getContentRootDirectory().c_str()));
+    logger.information(fmt::format("Content path: {0}", app.executableInfo.getContentRootDirectory().string()));
     //Initialize everything
     if(!app.initialize())
         app.logger.critical("App initialization failed!");
